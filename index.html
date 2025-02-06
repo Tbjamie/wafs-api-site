@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAFS API TEST</title>
+    <script type="module" src="./js/main.js" async></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/liquidjs/dist/liquid.browser.umd.js"
+      async
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="result">
+        <template>
+          {% for person in persons %}
+          <div class="card">
+            {% if person.avatar != null %}
+            <div class="profilepic">
+              <img src="{{ person.avatar }}" alt="{{ person.name }}'s avatar" />
+            </div>
+            {% endif %}
+            <div>
+              <h2>{{ person.name }}</h2>
+              {% if person.github_handle != '' %} {% if person.github_handle !=
+              null %}
+              <p>@{{ person.github_handle }}</p>
+              {% endif %} {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </template>
+      </div>
+    </main>
+  </body>
+</html>
