@@ -5,8 +5,13 @@
 }
 
 :root {
-  --black: #121212;
+  /* COLORS */
+  --black: #0a0a0a;
   --white: #f8f8f8;
+  --purple: #4000a7;
+
+  /* SPACING */
+  --fluid-padding-main: clamp(2rem, -0.5485rem + 10.8738vw, 12.5rem);
 }
 
 html {
@@ -21,8 +26,13 @@ body {
   overflow-x: hidden;
 }
 
+section:first-of-type {
+  height: 100vh;
+}
+
 #result {
   display: flex;
+  gap: 2rem;
   animation-name: marquee;
   animation-duration: 20s;
   animation-timing-function: linear;
@@ -42,6 +52,7 @@ body {
   background-color: var(--white);
   padding: 1rem 3rem;
   width: fit-content;
+  height: fit-content;
   border-radius: 9999px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 1);
   display: flex;
@@ -72,4 +83,42 @@ template div h2 {
 
 template div p {
   display: inline-block;
+}
+
+section:nth-of-type(2) {
+  padding-left: var(--fluid-padding-main);
+  padding-right: var(--fluid-padding-main);
+}
+
+section:nth-of-type(2) h3 {
+  color: var(--white);
+  font-size: 6rem;
+  -webkit-text-stroke: #f8f8f8 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+section:nth-of-type(2) h3 span {
+  color: var(--white);
+  position: absolute;
+  transform: translateY(50%);
+  top: 0;
+  left: 0;
+}
+
+section:last-of-type {
+  height: 300vh;
+  border: solid 10px red;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+section:last-of-type h2 {
+  grid-column: 1 / -1;
+  font-size: 6rem;
+  position: sticky;
+  top: calc(50% - 6rem);
+  text-align: center;
 }

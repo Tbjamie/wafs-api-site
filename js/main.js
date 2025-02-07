@@ -18,6 +18,10 @@ try {
       person.github_handle = person.github_handle.replace("@", "");
       console.log(person.github_handle);
     }
+
+    if (person.avatar == null || person.avatar == "" || person.avatar == " ") {
+      person.avatar = null;
+    }
   });
 
   engine

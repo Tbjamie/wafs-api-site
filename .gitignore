@@ -1,0 +1,13 @@
+node_modules
+
+# Output
+.output
+/build
+
+# OS
+.DS_Store
+
+# Env
+.env
+.env.*
+!.env.example
