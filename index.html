@@ -19,63 +19,105 @@
     />
     <meta name="apple-mobile-web-app-title" content="WAFS" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <script type="module" src="./js/main.js" async></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/liquidjs/dist/liquid.browser.umd.js"
-      async
-    ></script>
-    <script src="https://unpkg.com/split-type" defer></script>
-    <script
-      src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"
-      defer
-    ></script>
-    <script src="./js/scrollEffects.js" defer></script>
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="body">
+    <div class="dot-cursor">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path
+          d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+        />
+      </svg>
+    </div>
+    <div class="loading">
+      <div class="loading-animation"></div>
+      <div class="loading-animation"></div>
+      <div class="loading-animation"></div>
+    </div>
     <main>
       <section>
         <div id="result">
           <template>
-            {% for person in persons %} {% if person.avatar != null %}
-            <div class="card">
-              <div class="profilepic">
-                <img
-                  src="{{ person.avatar }}"
-                  alt="{{ person.name }}'s avatar"
-                />
-              </div>
-              <div>
-                <h2>{{ person.name }}</h2>
-                {% if person.github_handle != '' %} {% if person.github_handle
-                != null %}
-                <p>@{{ person.github_handle }}</p>
-                {% endif %} {% endif %}
-              </div>
-            </div>
+            {% for person in persons %}
+            <h3>{{ person.name }}</h3>
+            {% if person.name == null | undefinded %}
+            <h3>Jamie Tirbeni</h3>
+            {% endif %} {% if person.github_handle != '' %}
+            <a
+              target="_blank"
+              href="https://www.github.com/{{ person.github_handle }}"
+              >@{{ person.github_handle }}</a
+            >
             {% endif %} {% endfor %}
           </template>
         </div>
       </section>
 
-      <section>
+      <section class="parallax-section">
+        <h2>About me</h2>
+
+        <a href="https://www.jamietirbeni.com" target="blank">
+          <img
+            src="./images/nk-geoguessr-mockup.webp"
+            alt="Picture of my work"
+          />
+        </a>
+
+        <a href="https://www.jamietirbeni.com" target="blank">
+          <img
+            src="./images/paradise-shave-ice-mockup.webp"
+            alt="Picture of my work"
+          />
+        </a>
+
+        <a href="https://www.jamietirbeni.com" target="blank">
+          <img
+            src="./images/nk-geoguessr-mockup.webp"
+            alt="Picture of my work"
+          />
+        </a>
+      </section>
+
+      <section class="text-section">
         <h3 class="split-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar
-          sit amet tortor non condimentum.
+          CEO of SOMIE, a web design and development agency creating beautiful
+          and functional websites.
         </h3>
+
+        <!-- <a class="test" href="/">TEST</a> -->
+      </section>
+
+      <section class="work-section">
+        <article>
+          <img src="/images/nk-geoguessr-mockup.webp" alt="" />
+          <h3>Test</h3>
+        </article>
+
+        <article>
+          <img src="/images/paradise-shave-ice-mockup.webp" alt="" />
+          <h3>New Test</h3>
+        </article>
+
+        <article>
+          <img src="/images/nk-geoguessr-mockup.webp" alt="" />
+          <h3>Test</h3>
+        </article>
       </section>
 
       <section>
-        <h2>New section</h2>
+        <a href="/">TEST</a>
       </section>
     </main>
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/liquidjs/dist/liquid.browser.umd.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="./js/dotMouse.js"></script>
+    <script src="./js/scrollEffects.js"></script>
+    <script src="./js/pageLoader.js"></script>
   </body>
 </html>
