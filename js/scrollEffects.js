@@ -1,32 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lenis = new Lenis();
-  const parralaxImage = document.querySelector(
-    ".parallax-section a:first-of-type"
-  );
-  const parralaxImage2 = document.querySelector(
+  const parallax = document.querySelector(".parallax-section a:first-of-type");
+  const parallax2 = document.querySelector(
     ".parallax-section a:nth-of-type(2)"
   );
-  const parralaxImage3 = document.querySelector(
-    ".parallax-section a:last-of-type"
+  const parallax2Image = document.querySelector(
+    ".parallax-section a:nth-of-type(2) img"
+  );
+  const parallax3 = document.querySelector(".parallax-section a:last-of-type");
+  const parallax3Image = document.querySelector(
+    ".parallax-section a:last-of-type img"
+  );
+  const contactForm = document.querySelector(".contact form");
+  const contactImage = document.querySelector(".contact div");
+  const articles = document.querySelectorAll(
+    ".work-section article:nth-of-type(-n+2)"
   );
 
-  const firstWorkArticle = document.querySelectorAll(
-    ".work-section article:first-of-type"
-  );
-  const secondWorkArticle = document.querySelectorAll(
-    ".work-section article:nth-of-type(2)"
-  );
-  const lastWorkArticle = document.querySelectorAll(
-    ".work-section article:last-of-type"
-  );
+  const parallaxImages = [parallax2Image, parallax3Image];
 
   gsap.registerPlugin(ScrollTrigger);
 
-  lenis.on("scroll", ScrollTrigger.update);
+  // enabling lenis smooth scrolling using gsap scrolltrigger
 
-  // lenis.on("scroll", (e) => {
-  //   console.log(e);
-  // });
+  lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
@@ -34,40 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   gsap.ticker.lagSmoothing(0);
 
-  // gsap.to(".body", {
-  //   scrollTrigger: {
-  //     trigger: ".split-text",
-  //     start: "top 60%",
-  //     scrub: true,
-  //   },
-  //   backgroundColor: "purple",
-  //   duration: 2,
-  // });
+  // parallax effect on the parallax section
 
-  gsap.fromTo(
-    parralaxImage,
-    { y: 0 },
-    {
-      scrollTrigger: {
-        trigger: ".parallax-section",
-        start: "top 80%",
-        scrub: true,
-      },
-      y: 400,
-    }
-  );
-
-  gsap.to(".parallax-section a:first-of-type img", {
+  gsap.to(parallax, {
     scrollTrigger: {
-      trigger: parralaxImage,
-      start: "top 20%",
-      end: "top 0%",
+      trigger: ".parallax-section",
+      start: "top 80%",
       scrub: true,
     },
-    transformOrigin: "0% 100%",
+    y: 400,
   });
 
-  gsap.to(parralaxImage2, {
+  gsap.to(parallax2, {
     scrollTrigger: {
       trigger: ".parallax-section",
       start: "top 80%",
@@ -76,7 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 0,
   });
 
-  gsap.to(parralaxImage3, {
+  parallaxImages.forEach((image) => {
+    gsap.to(image, {
+      scrollTrigger: {
+        trigger: ".parallax-section",
+        start: "top -20%",
+        end: "bottom bottom",
+        scrub: true,
+      },
+      translateY: 100,
+    });
+  });
+
+  gsap.to(parallax3, {
     scrollTrigger: {
       trigger: ".parallax-section",
       start: "top 80%",
@@ -85,38 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 100,
   });
 
-  gsap.fromTo(
-    firstWorkArticle,
-    {
-      clipPath: "inset(0 0 0 0)",
-    },
-    {
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top 0",
-        scrub: true,
-        pin: true,
-      },
-      clipPath: "inset(0 100% 0 0)",
-    }
-  );
-
-  gsap.fromTo(
-    secondWorkArticle,
-    {
-      clipPath: "inset(0 0 0 0)",
-    },
-    {
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top 0",
-        scrub: true,
-        pin: true,
-      },
-      clipPath: "inset(0 100% 0 0)",
-    }
-  );
-
+  // scrolling text fill animation
   // SOURCE: https://www.youtube.com/watch?v=VeTwNnZUPlw&ab_channel=DesignCourse
 
   const splitTypes = document.querySelectorAll(".split-text");
@@ -136,4 +92,41 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  // clip path effect on the work section
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".work-section",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    })
+    .to(articles, {
+      clipPath: "inset(0 100% 0 0)",
+      stagger: 0.5,
+    });
+
+  // check if user prefers reduced motion and plays the animation if not
+
+  if (!window.matchMedia("(prefers-reduced-motion)").matches) {
+    gsap.from(contactForm, {
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "top 20%",
+      },
+      clipPath: "inset(100% 0 0 0)",
+      duration: 0.7,
+    });
+
+    gsap.from(contactImage, {
+      scrollTrigger: {
+        trigger: ".contact",
+        start: "top 20%",
+      },
+      clipPath: "inset(0 0 100% 0)",
+      duration: 0.7,
+    });
+  }
 });

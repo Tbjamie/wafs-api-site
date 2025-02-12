@@ -1,3 +1,5 @@
+/* COMMENTS: REVIEWED BY MIKE. USER TESTED & USER APPROVED */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,16 @@
   --black: #0a0a0a;
   --white: #f8f8f8;
   --purple: #4000a7;
+  --red: #fe4c4c;
+  --green: #63ea63;
 
   /* SPACING */
   --fluid-padding-main: clamp(2rem, -0.5485rem + 10.8738vw, 12.5rem);
+}
+
+::selection {
+  background-color: var(--purple);
+  color: var(--white);
 }
 
 html {
@@ -52,6 +61,16 @@ html {
     animation-delay: 4s;
     mix-blend-mode: normal;
   }
+
+  body:has(button:hover) & {
+    scale: 3;
+    background-color: var(--purple);
+    animation: idleHoverAnimation;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    mix-blend-mode: normal;
+  }
 }
 
 @keyframes idleHoverAnimation {
@@ -73,8 +92,11 @@ html {
   transition-delay: 200ms;
 
   body:has(a:hover) & {
-    /* scale: 20; */
     transform: translate(0%, 0%) rotate(-45deg);
+  }
+
+  body:has(button:hover) & {
+    transform: translate(0%, 0%) rotate(0deg);
   }
 }
 
@@ -101,6 +123,12 @@ html {
   background-color: var(--black);
   border-radius: 9999px;
   transition: 300ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-animation.animate {
+    animation: none;
+  }
 }
 
 .loading-animation.animate {
@@ -130,12 +158,28 @@ body {
   background-image: linear-gradient(180deg, var(--black), var(--purple));
 }
 
+/* Styling of the hero section */
+
 section:first-of-type {
   height: 100vh;
   overflow-x: hidden;
+  overflow: hidden;
 }
 
+.glow {
+  width: 20rem;
+  height: 20rem;
+  background-color: var(--purple);
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(200px);
+  pointer-events: none;
+}
+
+/* #result is the wrapper for the template where the data from the api is displayed, currently in the first section (section > div) */
+
 #result {
+  z-index: 10;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -145,7 +189,7 @@ section:first-of-type {
   gap: 4rem;
 }
 
-#result h3 {
+#result h1 {
   font-size: 4rem;
   text-transform: uppercase;
   text-align: center;
@@ -181,8 +225,9 @@ section:first-of-type {
   mix-blend-mode: exclusion;
   position: fixed;
   z-index: 9999;
-  /* left: calc(); */
 }
+
+/* This is the template where data is displayed using liquidjs */
 
 template div h3 {
   text-transform: uppercase;
@@ -190,12 +235,13 @@ template div h3 {
   height: fit-content;
 }
 
+/* this is the styling for the parallax section */
+
 section:nth-of-type(2) {
   height: 300vh;
   width: 100vw;
   padding-left: var(--fluid-padding-main);
   padding-right: var(--fluid-padding-main);
-  /* border: solid 10px red; */
   position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -229,6 +275,15 @@ section:nth-of-type(2) a img {
   object-fit: cover;
 }
 
+/* hides video on large screens (using media query to show on large screens) */
+
+section:nth-of-type(2) a video {
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  display: none;
+}
+
 section:nth-of-type(2) a:first-of-type {
   grid-column: span 3;
   grid-row: 3 / 4;
@@ -245,16 +300,12 @@ section:nth-of-type(2) a:last-of-type {
   grid-row: 6 / 7;
 }
 
+/* this is the styling for the text fill animation section */
+
 .text-section {
   padding-left: var(--fluid-padding-main);
   padding-right: var(--fluid-padding-main);
-  animation-timeline: view(0, 0, 0, 0);
-}
-
-@keyframes changeBackgroundColor {
-  to {
-    background-color: var(--purple);
-  }
+  padding-bottom: 10rem;
 }
 
 .text-section h3 {
@@ -263,29 +314,41 @@ section:nth-of-type(2) a:last-of-type {
   position: relative;
   overflow: hidden;
   font-size: clamp(2.5rem, 0.9827rem + 6.474vw, 6rem);
+  color: var(--white);
 }
+
+/* this is the styling for the section where the inset animation takes place */
 
 .work-section {
   width: 100vw;
-  height: 100vh;
-  position: relative;
+  height: calc(var(--slide-amount) * 100lvh);
+}
+
+/* this is the container for the articles to get position sticky, necessary to achieve the effect */
+
+.sticky-track {
+  position: sticky;
+  width: 100%;
+  height: 100lvh;
+  top: 0;
 }
 
 .work-section article {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: greenyellow;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-end;
   padding-bottom: var(--fluid-padding-main);
   padding-left: var(--fluid-padding-main);
   padding-right: var(--fluid-padding-main);
-  clip-path: inset(0 0 0 0);
   z-index: 3;
+  clip-path: inset(0);
 }
 
 .work-section article:nth-of-type(2) {
@@ -304,27 +367,291 @@ section:nth-of-type(2) a:last-of-type {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
   object-fit: cover;
 }
 
-.work-section article h3 {
-  font-size: 4rem;
+.work-section article div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0a;
+  z-index: -1;
+  opacity: 0.3;
 }
 
-section:last-of-type {
-  height: 300vh;
+.work-section article h3 {
+  font-size: clamp(2rem, 2.071vw + 1.515rem, 4rem);
+  margin-bottom: 1rem;
 }
+
+.work-section article p {
+  color: #f8f8f8;
+}
+
+/* this is the styling for the final section (including form and image styling) */
+
+section:last-of-type {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding-left: var(--fluid-padding-main);
+  padding-right: var(--fluid-padding-main);
+}
+
+section:last-of-type form {
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 3rem var(--fluid-padding-main);
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+section:last-of-type form h2 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+section:last-of-type form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+section:last-of-type form label input {
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  transition: 300ms;
+}
+
+section:last-of-type form label input#name {
+  text-transform: capitalize;
+}
+
+section:last-of-type form label input:focus-visible {
+  outline: none;
+}
+
+/* styling for valid and invalid input fields */
+
+section:last-of-type form label input:user-invalid {
+  border: solid 1px var(--red);
+}
+
+section:last-of-type form label input:user-valid {
+  border: solid 1px var(--green);
+}
+
+section:last-of-type form label textarea {
+  height: 20vh;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  resize: none;
+  color: var(--white);
+  transition: 300ms;
+}
+
+section:last-of-type form label textarea:focus-visible {
+  outline: none;
+}
+
+/* styling for valid and invalid textarea field */
+
+section:last-of-type form label textarea:user-invalid {
+  border: solid 1px var(--red);
+}
+
+section:last-of-type form label textarea:user-valid {
+  border: solid 1px var(--green);
+}
+
+section:last-of-type form button {
+  background-color: var(--white);
+  color: var(--black);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem 2rem;
+  transition: 200ms;
+  margin-top: 1rem;
+}
+
+section:last-of-type form button:hover,
+section:last-of-type form button:focus-visible {
+  background-color: var(--purple);
+  color: #f8f8f8;
+  outline: none;
+}
+
+section:last-of-type form button:active {
+  background-color: var(--purple);
+  opacity: 0.6;
+  color: #f8f8f8;
+}
+
+/* styling for the button if the form is invalid */
+
+section:last-of-type form:invalid {
+  button {
+    background: rgb(148, 148, 148);
+    color: rgb(195, 195, 195);
+  }
+}
+
+section:last-of-type div {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+section:last-of-type div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* this is the media query for light mode (default styling is dark mode) */
 
 @media (prefers-color-scheme: light) {
   :root {
     --black: #f8f8f8;
     --white: #0a0a0a;
     --purple: #a872ff;
+    --red: #e32a2a;
+    --green: #2dca2d;
+  }
+
+  .dot-cursor {
+    mix-blend-mode: overlay;
   }
 
   section:nth-of-type(2) h2 {
     color: var(--white);
     mix-blend-mode: overlay;
+  }
+
+  .work-section article h3 {
+    color: var(--black);
+  }
+
+  section:last-of-type form label input {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  section:last-of-type form label textarea {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  section:last-of-type form button {
+    color: #f8f8f8;
+  }
+}
+
+/* this is the media query to make the website repsonsive, I put the breakpoint at 1024px */
+
+@media screen and (min-width: 1024px) {
+  /* hiding the image to replace it with a video */
+
+  section:nth-of-type(2) a .parallax-somie-logo {
+    display: none;
+  }
+
+  /* displaying the video instead of the image above */
+
+  section:nth-of-type(2) a video {
+    display: block;
+  }
+
+  .work-section article p {
+    max-width: 60%;
+  }
+
+  /* putting the form and div in the last section next to eachother instead of top and bottom */
+
+  section:last-of-type {
+    flex-direction: row;
+    height: 125vh;
+  }
+
+  section:last-of-type form {
+    border-radius: 20px 0 0 20px;
+    width: 50%;
+    padding: 0 var(--fluid-padding-main);
+  }
+
+  section:last-of-type div {
+    border-radius: 0 20px 20px 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+/* this is the media query to make the website repsonsive, I put the breakpoint at 1920px */
+
+@media screen and (min-width: 1920px) {
+  section:last-of-type {
+    height: 100vh;
+  }
+}
+
+/* this is the media query to make the website repsonsive, I put the breakpoint at 2560px */
+
+@media screen and (min-width: 2560px) {
+  .glow {
+    width: 30rem;
+    height: 30rem;
+    filter: blur(350px);
+  }
+
+  #result {
+    gap: 8rem;
+  }
+
+  #result h1 {
+    font-size: 6rem;
+  }
+
+  #result a {
+    padding: 1rem 3rem;
+    font-size: 1.25rem;
+  }
+
+  .text-section h3 {
+    padding-left: var(--fluid-padding-main);
+    padding-right: var(--fluid-padding-main);
+  }
+
+  section:last-of-type {
+    margin-left: var(--fluid-padding-main);
+    margin-right: var(--fluid-padding-main);
+  }
+
+  section:last-of-type h2 {
+    font-size: 3rem;
+  }
+
+  section:last-of-type form label input {
+    padding: 1rem 1.5rem;
+  }
+
+  section:last-of-type form button {
+    padding: 1rem 2.5rem;
   }
 }

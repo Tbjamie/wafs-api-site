@@ -1,10 +1,12 @@
 const loaderContainer = document.querySelector(".loading");
 const loaders = document.querySelectorAll(".loading-animation");
 
+// Add animate class to loaders (divs)
 loaders.forEach((loader) => {
   loader.classList.add("animate");
 });
 
+// transition from the loading screen to the page
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     loaders.forEach((loader) => {

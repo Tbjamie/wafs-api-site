@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const result = document.querySelector("#result");
   const engine = new liquidjs.Liquid();
 
+  // fetching the data
   async function fetchData() {
     if (engine) {
       try {
@@ -16,20 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const json = await response.json();
 
+        // if there is a github handle with @ remove it
         json.data.forEach((person) => {
           if (person.github_handle && person.github_handle.includes("@")) {
             person.github_handle = person.github_handle.replace("@", "");
           }
-
-          if (
-            person.avatar == null ||
-            person.avatar == "" ||
-            person.avatar == " "
-          ) {
-            person.avatar = null;
-          }
         });
 
+        // parse this data to use it with liquidjs in the HTML
         engine
           .parseAndRender(template.innerHTML, { persons: json.data })
           .then((html) => (result.innerHTML = html));
@@ -38,8 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Error: ", error);
         }
       }
-    } else {
-      return `<h1>Jamie Tirbeni</h1>`;
     }
   }
 
