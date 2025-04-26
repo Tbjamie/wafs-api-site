@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
     mouseDot.style.top = e.clientY - mouseDot.offsetWidth / 2 + "px";
 
     // set first section glow position opposite to mouse position
-    glow.style.left =
-      window.innerWidth - e.clientX - glow.offsetWidth / 2 + "px";
-    glow.style.top =
-      window.innerHeight - e.clientY - glow.offsetWidth / 2 + "px";
+    if (glow) {
+      glow.style.left =
+        window.innerWidth - e.clientX - glow.offsetWidth / 2 + "px";
+      glow.style.top =
+        window.innerHeight - e.clientY - glow.offsetWidth / 2 + "px";
+    }
   }
 
   // Check if device is a touch device

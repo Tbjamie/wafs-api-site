@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="body">
+  <body class="body" id="home">
     <div class="dot-cursor">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
         <path
@@ -35,6 +35,15 @@
       <div class="loading-animation"></div>
       <div class="loading-animation"></div>
     </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/weekly-nerd">Weekly Nerd</a></li>
+          <li><a class="goals" href="/goals">Goals</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
         <div class="glow"></div>
@@ -64,22 +73,22 @@
             loop
             autoplay
             muted
-            src="./images/somie-logo-full-animation.mp4"
+            src="./assets/images/somie-logo-full-animation.mp4"
           ></video>
           <img
             class="parallax-somie-logo"
-            src="./images/somie-logo-small.webp"
+            src="./assets/images/somie-logo-small.webp"
             alt="SOMIE: Your Vision, Our Creation. A web development and designing agency building exceptional experiences"
           />
         </a>
 
         <a href="https://www.jamietirbeni.com" target="blank">
-          <img src="./images/wedding.webp" alt="Picture of my wedding" />
+          <img src="./assets/images/wedding.webp" alt="Picture of my wedding" />
         </a>
 
         <a href="https://www.nkgeoguessr.nl" target="blank">
           <img
-            src="./images/nk-geoguessr-mockup.webp"
+            src="./assets/images/nk-geoguessr-mockup.webp"
             alt="A mockup of the NK GeoGuessr website"
           />
         </a>
@@ -97,7 +106,7 @@
           <article>
             <div></div>
             <img
-              src="./images/nk-geoguessr-mockup.webp"
+              src="./assets/images/nk-geoguessr-mockup.webp"
               alt="A mockup of the NK GeoGuessr website"
             />
             <h3>NK GeoGuessr</h3>
@@ -111,7 +120,7 @@
           <article>
             <div></div>
             <img
-              src="./images/paradise-shave-ice-mockup.webp"
+              src="./assets/images/paradise-shave-ice-mockup.webp"
               alt="A mockup of the Paradise Shave Ice website"
             />
             <h3>Paradise Shave Ice</h3>
@@ -125,7 +134,7 @@
           <article>
             <div></div>
             <img
-              src="./images/weatherpulse-mockup.webp"
+              src="./assets/images/weatherpulse-mockup.webp"
               alt="A mockup of the WeatherPulse website"
             />
             <h3>WeatherPulse</h3>
@@ -174,7 +183,7 @@
         </form>
         <div>
           <img
-            src="./images/nk-geoguessr-mockup.webp"
+            src="./assets/images/nk-geoguessr-mockup.webp"
             alt="A mockup of the NK GeoGuessr website"
           />
         </div>
@@ -191,5 +200,6 @@
     <script src="./js/scrollEffects.js"></script>
     <script src="./js/pageLoader.js"></script>
     <script src="./js/handeSubmit.js"></script>
+    <script src="./js/navigation.js"></script>
   </body>
 </html>

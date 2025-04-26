@@ -9,6 +9,7 @@
 :root {
   /* COLORS */
   --black: #0a0a0a;
+  --black-50: #0a0a0a44;
   --white: #f8f8f8;
   --purple: #4000a7;
   --red: #fe4c4c;
@@ -33,6 +34,22 @@ html {
 :active,
 :focus {
   cursor: none;
+}
+
+:focus {
+  outline: none;
+}
+
+body:has(svg[class="fav-button"]:hover) {
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: pointer;
+  }
+
+  & html {
+    cursor: pointer;
+  }
 }
 
 .dot-cursor {
@@ -60,6 +77,48 @@ html {
     animation-fill-mode: forwards;
     animation-delay: 4s;
     mix-blend-mode: normal;
+  }
+
+  body:has(a:active) & {
+    scale: 2;
+  }
+
+  body:has(svg[class="fav-button"]:hover) &,
+  body:has(svg[class="fav-button favorite"]:hover) & {
+    scale: 0.5;
+    background-color: var(--purple);
+    animation: none;
+    mix-blend-mode: normal;
+
+    & svg {
+      display: none;
+    }
+  }
+
+  body:has(svg[class="fav-button"]:active) &,
+  body:has(svg[class="fav-button favorite"]:active) & {
+    scale: 0.3;
+    background-color: var(--purple);
+    animation: none;
+    mix-blend-mode: normal;
+
+    & svg {
+      display: none;
+    }
+  }
+
+  body:has(select:hover) & {
+    scale: 0.5;
+    background-color: var(--purple);
+    animation: idleHoverAnimation;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    mix-blend-mode: normal;
+
+    & svg {
+      display: none;
+    }
   }
 
   body:has(button:hover) & {
@@ -150,6 +209,65 @@ html {
   }
 }
 
+header {
+  width: 100vw;
+  height: 15vh;
+  position: absolute;
+  padding-left: var(--fluid-padding-main);
+  padding-right: var(--fluid-padding-main);
+  top: 0;
+  left: 0;
+  & nav {
+    width: 100%;
+    height: 100%;
+    & ul {
+      display: flex;
+      gap: 4rem;
+      list-style: none;
+      width: 100%;
+      height: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: transparent;
+
+      & a {
+        text-decoration: none;
+        color: var(--white);
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          transition: 500ms;
+        }
+
+        &:hover,
+        &:focus {
+          &::after {
+            top: 80%;
+            background-color: var(--green);
+          }
+        }
+      }
+    }
+  }
+}
+
+.active-page {
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    top: -10px;
+    left: 0;
+    border-radius: 9999px;
+    z-index: -1;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: var(--white);
@@ -160,7 +278,7 @@ body {
 
 /* Styling of the hero section */
 
-section:first-of-type {
+#home section:first-of-type {
   height: 100vh;
   overflow-x: hidden;
   overflow: hidden;
@@ -237,7 +355,7 @@ template div h3 {
 
 /* this is the styling for the parallax section */
 
-section:nth-of-type(2) {
+#home section:nth-of-type(2) {
   height: 300vh;
   width: 100vw;
   padding-left: var(--fluid-padding-main);
@@ -248,7 +366,7 @@ section:nth-of-type(2) {
   grid-template-rows: repeat(8, 1fr);
 }
 
-section:nth-of-type(2) h2 {
+#home section:nth-of-type(2) h2 {
   grid-column: 1 / -1;
   font-size: clamp(3rem, 1.6994rem + 5.5491vw, 6rem);
   position: sticky;
@@ -260,7 +378,7 @@ section:nth-of-type(2) h2 {
   z-index: 1;
 }
 
-section:nth-of-type(2) a {
+#home section:nth-of-type(2) a {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -269,7 +387,7 @@ section:nth-of-type(2) a {
   align-items: center;
 }
 
-section:nth-of-type(2) a img {
+#home section:nth-of-type(2) a img {
   width: 150%;
   height: 150%;
   object-fit: cover;
@@ -277,25 +395,25 @@ section:nth-of-type(2) a img {
 
 /* hides video on large screens (using media query to show on large screens) */
 
-section:nth-of-type(2) a video {
+#home section:nth-of-type(2) a video {
   width: 150%;
   height: 150%;
   object-fit: cover;
   display: none;
 }
 
-section:nth-of-type(2) a:first-of-type {
+#home section:nth-of-type(2) a:first-of-type {
   grid-column: span 3;
   grid-row: 3 / 4;
 }
 
-section:nth-of-type(2) a:nth-of-type(2) {
+#home section:nth-of-type(2) a:nth-of-type(2) {
   grid-column: 5 / -1;
   grid-row: 5 / 6;
   z-index: 2;
 }
 
-section:nth-of-type(2) a:last-of-type {
+#home section:nth-of-type(2) a:last-of-type {
   grid-column: 3 / 6;
   grid-row: 6 / 7;
 }
@@ -393,7 +511,7 @@ section:nth-of-type(2) a:last-of-type {
 
 /* this is the styling for the final section (including form and image styling) */
 
-section:last-of-type {
+#home section:last-of-type {
   padding-top: 10rem;
   padding-bottom: 10rem;
   height: 150vh;
@@ -405,7 +523,7 @@ section:last-of-type {
   padding-right: var(--fluid-padding-main);
 }
 
-section:last-of-type form {
+#home section:last-of-type form {
   background-color: var(--black);
   width: 100%;
   height: 100%;
@@ -496,7 +614,6 @@ section:last-of-type form button:hover,
 section:last-of-type form button:focus-visible {
   background-color: var(--purple);
   color: #f8f8f8;
-  outline: none;
 }
 
 section:last-of-type form button:active {
@@ -527,12 +644,314 @@ section:last-of-type div img {
   object-fit: cover;
 }
 
+/* Weekly nerd page styling */
+
+#weekly-nerd {
+  padding-top: 20vh;
+  padding-bottom: 10vh;
+
+  & main {
+    min-height: 85vh;
+  }
+
+  & main > div {
+    padding-left: var(--fluid-padding-main);
+    padding-right: var(--fluid-padding-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & select {
+      appearance: base-select;
+      padding: 0.25rem 1.5rem;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 1.5rem;
+      transition: 300ms;
+
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+  & section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    container-type: inline-size;
+    padding-left: var(--fluid-padding-main);
+    padding-right: var(--fluid-padding-main);
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1920px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: 2560px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    & .card {
+      background-color: red;
+      border-radius: 6px;
+      width: 100%;
+      height: 25vh;
+
+      position: relative;
+      overflow: hidden;
+
+      &:hover,
+      &:focus-within {
+        & a {
+          & img {
+            scale: 1.5;
+          }
+        }
+      }
+
+      & p {
+        font-size: 0.875rem;
+        margin-top: 0.125rem;
+      }
+
+      & a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 2rem 1.5rem;
+        text-decoration: none;
+        color: var(--white);
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: var(--black-50);
+        }
+
+        & img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 300ms;
+        }
+
+        & > div {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          z-index: 1;
+
+          & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+        }
+
+        & svg {
+          fill: transparent;
+          width: 1.75rem;
+          height: 1.75rem;
+          stroke-width: 20px;
+          stroke: var(--white);
+          transition: 300ms;
+
+          &:hover,
+          &:focus-visible {
+            fill: rgba(255, 255, 255, 0.4);
+          }
+
+          &:active {
+            fill: var(--white);
+          }
+        }
+      }
+    }
+
+    & .back-button {
+      width: 2rem;
+      height: 2rem;
+      background: transparent;
+      border: none;
+      position: absolute;
+      top: 7vh;
+
+      left: var(--fluid-padding-main);
+      & svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--white);
+
+        transition: 300ms;
+      }
+    }
+
+    & .back-button-text {
+      opacity: 0;
+      position: absolute;
+    }
+
+    & .detail-heading {
+      margin-top: 2rem;
+    }
+
+    & .detail-content {
+      margin-top: 1rem;
+    }
+
+    & .detail-article {
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+
+      &:hover,
+      &:focus-within {
+        & a {
+          pointer-events: none;
+
+          & img {
+            scale: 1;
+          }
+        }
+      }
+    }
+
+    & .card.favorite {
+      & a {
+        & svg {
+          fill: var(--red);
+          stroke: var(--red);
+        }
+      }
+    }
+  }
+}
+
+#goals {
+  min-height: 100vh;
+
+  & main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    padding: 20vh var(--fluid-padding-main) 5rem var(--fluid-padding-main);
+
+    & h1 {
+      position: absolute;
+      text-align: center;
+      align-self: center;
+      opacity: 0;
+    }
+  }
+
+  & .goal-card {
+    background: linear-gradient(145deg, var(--white), var(--purple));
+    width: 100%;
+    color: var(--black);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    height: max-content;
+
+    @media screen and (min-width: 1024px) {
+      animation: goal-card-down 5s cubic-bezier(0.912, -0.003, 0.34, 1) forwards
+        infinite alternate;
+
+      &:hover,
+      &:focus-visible {
+        animation-play-state: paused;
+      }
+    }
+
+    & h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    & p {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &:nth-of-type(2) {
+      @media screen and (min-width: 1024px) {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        animation: goal-card-up 5s cubic-bezier(0.912, -0.003, 0.34, 1) forwards
+          infinite alternate;
+
+        &:hover,
+        &:focus-visible {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    &:last-of-type {
+      @media screen and (min-width: 1024px) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+  }
+}
+
+@keyframes goal-card-down {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes goal-card-up {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-200%);
+  }
+}
+
 /* this is the media query for light mode (default styling is dark mode) */
 
 @media (prefers-color-scheme: light) {
   :root {
     --black: #f8f8f8;
     --white: #0a0a0a;
+    --black-50: #f8f8f844;
     --purple: #a872ff;
     --red: #e32a2a;
     --green: #2dca2d;
@@ -542,24 +961,24 @@ section:last-of-type div img {
     mix-blend-mode: overlay;
   }
 
-  section:nth-of-type(2) h2 {
+  #home section:nth-of-type(2) h2 {
     color: var(--white);
     mix-blend-mode: overlay;
   }
 
-  .work-section article h3 {
+  #home .work-section article h3 {
     color: var(--black);
   }
 
-  section:last-of-type form label input {
+  #home section:last-of-type form label input {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  section:last-of-type form label textarea {
+  #home section:last-of-type form label textarea {
     background-color: rgba(0, 0, 0, 0.1);
   }
 
-  section:last-of-type form button {
+  #home section:last-of-type form button {
     color: #f8f8f8;
   }
 }
@@ -569,34 +988,34 @@ section:last-of-type div img {
 @media screen and (min-width: 1024px) {
   /* hiding the image to replace it with a video */
 
-  section:nth-of-type(2) a .parallax-somie-logo {
+  #home section:nth-of-type(2) a .parallax-somie-logo {
     display: none;
   }
 
   /* displaying the video instead of the image above */
 
-  section:nth-of-type(2) a video {
+  #home section:nth-of-type(2) a video {
     display: block;
   }
 
-  .work-section article p {
+  #home .work-section article p {
     max-width: 60%;
   }
 
   /* putting the form and div in the last section next to eachother instead of top and bottom */
 
-  section:last-of-type {
+  #home section:last-of-type {
     flex-direction: row;
     height: 125vh;
   }
 
-  section:last-of-type form {
+  #home section:last-of-type form {
     border-radius: 20px 0 0 20px;
     width: 50%;
     padding: 0 var(--fluid-padding-main);
   }
 
-  section:last-of-type div {
+  #home section:last-of-type div {
     border-radius: 0 20px 20px 0;
     width: 50%;
     height: 100%;
@@ -606,7 +1025,7 @@ section:last-of-type div img {
 /* this is the media query to make the website repsonsive, I put the breakpoint at 1920px */
 
 @media screen and (min-width: 1920px) {
-  section:last-of-type {
+  #home section:last-of-type {
     height: 100vh;
   }
 }
@@ -614,44 +1033,48 @@ section:last-of-type div img {
 /* this is the media query to make the website repsonsive, I put the breakpoint at 2560px */
 
 @media screen and (min-width: 2560px) {
-  .glow {
+  #home .glow {
     width: 30rem;
     height: 30rem;
     filter: blur(350px);
   }
 
-  #result {
+  #home #result {
     gap: 8rem;
   }
 
-  #result h1 {
+  #home #result h1 {
     font-size: 6rem;
   }
 
-  #result a {
+  #home #result a {
     padding: 1rem 3rem;
     font-size: 1.25rem;
   }
 
-  .text-section h3 {
+  #home .text-section h3 {
     padding-left: var(--fluid-padding-main);
     padding-right: var(--fluid-padding-main);
   }
 
-  section:last-of-type {
+  #home section:last-of-type {
     margin-left: var(--fluid-padding-main);
     margin-right: var(--fluid-padding-main);
   }
 
-  section:last-of-type h2 {
+  #home section:last-of-type h2 {
     font-size: 3rem;
   }
 
-  section:last-of-type form label input {
+  #home section:last-of-type form label input {
     padding: 1rem 1.5rem;
   }
 
-  section:last-of-type form button {
+  #home section:last-of-type form button {
     padding: 1rem 2.5rem;
   }
 }
+
+/* ::picker-icon {
+  display: none;
+} */

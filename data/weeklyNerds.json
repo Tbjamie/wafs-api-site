@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Stop Using JS for That",
+    "person": "Kilian Valkhof",
+    "category": "speaker",
+    "reflection": "Ik vond deze weekly nerd erg interessant, omdat er sommige dingen voorbij kwamen die ik nog niet wist dat je HTML en CSS kon gebruiken in plaats van JavaScript. Ook vond ik 'the rule of least power' erg interessant, omdat ik dit nog niet eerder had gehoord. Het is een goede tip om te onthouden dat je de browser meer zelf moet laten regelen.",
+    "content": "In de presentatie “Stop Using JS for That” laat Kilian Valkhof zien dat je tegenwoordig veel dingen die je normaal met JavaScript zou doen, ook gewoon met HTML en CSS kunt maken. Denk aan dingen als accordeons, popups en switches. Hij zegt: gebruik de simpelste oplossing die werkt — vaak is dat dus niet JS. Met HTML en CSS laat je de browser meer zelf regelen, wat vaak beter werkt én minder snel stukgaat. Hij liet live voorbeelden zien van checkboxes, de <details> tag voor accordeons, en <dialog> voor modals, allemaal zonder of met heel weinig JavaScript. Ook nieuwe CSS dingen zoals :has(), focus-visible en @starting-style kwamen voorbij.",
+    "image": "https://pbs.twimg.com/profile_images/1181285099813388288/BqrzE9gF_400x400.jpg",
+    "company": "Polypane",
+    "slug": "/weekly-nerd/#kilian-valkhof"
+  },
+  {
+    "title": "Pay the Web Forward",
+    "person": "Peter-Paul Koch",
+    "category": "speaker",
+    "reflection": "Web Monetization is een uniek concept, maar ik ben van mening dat dit niet de toekomst is. Het idee dat je x bedrag per maand betaalt voor een website is niet iets wat ik zie gebeuren. Dit is omdat het misschien voor developers leuk is om zo iets te maken, maar voor de gemiddelde gebruiker is dit niet iets wat ze willen. Ik heb hierover gesproken ook met non-developers en zij gaven aan dat ze simpelweg niet de website zouden gebruiken.",
+    "content": "In “Pay the Web Forward” pleit Peter-Paul Koch voor een alternatief verdienmodel op het web, namelijk Web Monetization. Hij legt uit dat het huidige systeem — waarbij alles gratis is en gefinancierd wordt via advertenties — ontstaan is uit gewoonte en slechte beslissingen in de jaren '90. Daardoor is content nu vaak gericht op clicks in plaats van kwaliteit. Web Monetization draait het om: gebruikers kunnen vrijwillig betalen aan sites die ze echt waarderen, gebaseerd op hoe lang ze er blijven. Dit stimuleert betere content in plaats van clickbait. Je hebt hiervoor een wallet nodig, een browserextensie, en je bepaalt zelf hoeveel je per uur of per maand wilt besteden.",
+    "image": "https://i.ytimg.com/vi/3Wgm4sq0pn0/maxresdefault.jpg",
+    "company": "Web Monetization",
+    "slug": "/weekly-nerd/#peter-paul-koch"
+  },
+  {
+    "title": "GSAP",
+    "person": "Cassie Evans",
+    "category": "speaker",
+    "reflection": "Ik was helaas ziek tijdens deze weekly nerd, maar ik heb zelf wat research gedaan en de slides bekeken en ik was altijd al een fan van GSAP, maar ik werd nog steeds verbaast door de mogelijkheden die er zijn. Vooral de timelines die je kan maken zijn erg handig en ik zal GSAP zeker blijven gebruiken voor het maken van animaties.",
+    "content": "GSAP (GreenSock Animation Platform) is een krachtige JavaScript-animatiebibliotheek waarmee je heel vloeiende en complexe animaties kunt maken. Het werkt op vrijwel alles wat je op een webpagina kunt animeren: DOM-elementen, SVG's, canvas, zelfs WebGL. GSAP is supersnel, werkt goed in alle moderne browsers en is makkelijk te gebruiken met simpele code. Bijvoorbeeld: gsap.to('.box', { x: 100, duration: 1 }) — en je hebt al een animatie. Het ondersteunt ook timelines, waarmee je meerdere animaties precies na elkaar of tegelijk kunt laten gebeuren.",
+    "image": "https://pixelpioneers.co/imager/pioneers/1204/cassie_evans_ad3aa96fd14ad17c252000c804266ea7.png",
+    "company": "GSAP",
+    "slug": "/weekly-nerd/#cassie-evans"
+  },
+  {
+    "title": "Declarative Design",
+    "person": "Jeremy Keith",
+    "category": "speaker",
+    "reflection": "Ik heb met Jeremy Keith gesproken en vooral een ding wat hij tegen me zei is iets waar ik altijd rekening mee zal houden. Dit is dat je eigenlijk alle elementen die met JavaScript beinvloed worden (Dus bijvoorbeeld display: none), die moeten standaard zichtbaar zijn in de HTML en CSS en met JavaScript verborgen worden, want zo zorg je ervoor dat als JavaScript niet werkt dat de website nog steeds goed te gebruiken is. Dit is iets wat ik nog niet eerder had gehoord, maar ik vind het een hele goede tip.",
+    "content": "In “Declarative Design” legt Jeremy Keith het verschil uit tussen imperatief en declaratief programmeren. Bij imperatief geef je de computer strikte instructies (zoals met JavaScript), terwijl je bij declaratief vooral beschrijft wat je wil bereiken (zoals met HTML of CSS). HTML is fouttolerant en blijft werken, ook als er iets niet klopt — JavaScript niet. Daarom zegt Jeremy: “JavaScript should only do what only JavaScript can do.” Hij benadrukt dat we de browser niet moeten micromanagen, maar begeleiden. Denk dus in systemen, gebruik tools zoals clamp(), REM en sites als utopia.fyi om flexibele en schaalbare designs te maken.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Jeremy_Keith_in_2019.jpg",
+    "company": "Clearleft",
+    "slug": "/weekly-nerd/#jeremy-keith"
+  },
+  {
+    "title": "Hackers United",
+    "person": "Rosa",
+    "category": "speaker",
+    "reflection": "Ik snapte eerlijk gezegd niet helemaal hoe deze weekly nerd relevant was voor waar wij mee bezig zijn. Ik heb eerlijk gezegd niet veel van haar verhaal opgestoken en ik heb ook niet het idee dat ik hierdoor een betere developer ben geworden.",
+    "content": "In “Hackers United” deelt Rosa haar visie op wat het betekent om een hacker te zijn — en dat is iets heel anders dan het stereotype van iemand die computers kraakt. Voor haar draait hacken om creativiteit, nieuwsgierigheid en zelf dingen uitproberen: het DIY-ethos. Ze werkt met e-waste en oude apparaten en laat zien dat je met simpele tools, zoals ImageMagick via de terminal, toffe dingen kunt maken, zoals posters. Ze benadrukt dat je niet afhankelijk moet zijn van één tool of platform, maar meerdere opties moet kennen. Rosa moedigt aan om te leren door te proberen, zelfs als iets ingewikkeld is — zoals werken met Bash.",
+    "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    "company": "?",
+    "slug": "/weekly-nerd/#rosa"
+  },
+  {
+    "title": "Geld verdienen met Project Fugu",
+    "person": "Niels Leenheer",
+    "category": "speaker",
+    "reflection": "Het was interessant om te zien hoeveel er tegenwoordig mogelijk is met PWA's. Eerst waren er veel voordelen aan het maken van een native app, maar tegenwoordig zijn er dus blijkbaar al super veel manieren om een PWA te maken die net zo goed werkt als een native app. Dit was erg interessant om te zien en ook motivereed om beter als web developer te worden.",
+    "content": "In “Geld verdienen met Project Fugu” vertelt Niels Leenheer hoe hij met webtechnologie een volledig kassasysteem heeft gebouwd, vooral voor kapsalons via zijn platform Salonhub. Waar hij vroeger native apps gebruikte, maakt hij nu alles als PWA (Progressive Web App). Dankzij Project Fugu — een initiatief van Google om PWA's krachtiger te maken — kan hij bijvoorbeeld via WebUSB en WebSerial communiceren met bonnenprinters, klantendisplays en barcodescanners. Hij heeft hiervoor zelfs eigen JavaScript-libraries geschreven zoals EscPosEncoder en WebSerialCustomerDisplay om apparaten aan te sturen via het web.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS4digmKfjea4m1AsVh1tYoi9anJFeOPiZdAaN3jjsv-pP1Gj8uxnvANb4TTCgeCnHJQ&usqp=CAU",
+    "company": "?",
+    "slug": "/weekly-nerd/#niels-leenheer"
+  },
+  {
+    "title": "Practical fixes for common WCAG issues",
+    "person": "Erik Kroes",
+    "category": "speaker",
+    "reflection": "Erik noemde een aantal interessante punten op waar je rekening mee moet houden als je een website maakt. Ik zelf wist al redelijk veel van de dingen die hij vertelde, vooral denk ik omdat we op CMD veel met toegankelijkheid bezig zijn, maar sommige dingen zoals bijna nooit placeholders gebruiken waren wel interessant.",
+    "content": "In “Practical fixes for common WCAG issues” legt Erik Kroes uit wat toegankelijkheid (a11y) echt inhoudt: zorgen dat je product bruikbaar is voor iedereen, ook voor mensen met een beperking. Hij behandelt vier belangrijke onderdelen: toetsenbordnavigatie, contrast, alternatieven (zoals alt-tekst en ondertiteling) en responsive design. Een toegankelijke site hoeft niet perfect te zijn, maar moet technisch gewoon werken. Hij geeft concrete voorbeelden van veelvoorkomende fouten, zoals het vergeten van skip-links, slecht contrast bij tekst of knoppen, of het gebruik van niet-semantische HTML zoals <div role='button'>.",
+    "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    "company": "?",
+    "slug": "/weekly-nerd/#erik-kroes"
+  },
+  {
+    "title": "Thinking outside of the accessibility box",
+    "person": "Nienke Keijzer",
+    "category": "speaker",
+    "reflection": "Eigenlijk werd hier een beetje herhaald wat Erik Kroes ook al had verteld, maar dan iets meer haar persoonlijke ervaring met het werkt dat ze heeft gedaan voor GVB als haar afstudeerproject (En nu haar baan). Het was interessant om te horen dat de beste test eigenlijk gewoon is om te praten met de doelgroep waarom het gaat.",
+    "content": "In “Thinking outside of the accessibility box” vertelt Nienke de Keijzer over haar ervaring met toegankelijkheid, vooral in haar werk bij GVB (het openbaar vervoer in Amsterdam). Ze wijst erop dat er veel regels zijn zoals WCAG, EU-wetgeving en nieuwe Nederlandse wetten, maar dat ze het meest leert door gewoon met mensen te praten. In haar onderzoek liep ze tegen uitdagingen aan zoals kleine testgroepen of te technische tests, maar juist door echt contact met gebruikers vond ze waardevolle inzichten. Bij GVB werkte ze aan ReisAssist, een visuele modus speciaal voor mensen met een visuele beperking.",
+    "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+    "company": "GVB",
+    "slug": "/weekly-nerd/#nienke-keijzer"
+  },
+  {
+    "title": "WAFS",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Tijdens dit vak heb ik vooral geexperimenteerd met verschillende animaties van GSAP en ik heb daarnaast ook nieuwe effecten uitgeprobeerd, zoals: mix-blend-mode, clip-path animation, dot cursor en een glow die het tegenovergestelde van de cursor positie neemt. Ook heb ik een parallax effect gemaakt met scrolltrigger van GSAP. Dit was een hele leuke opdracht, omdat ik veel heb geleerd over de mogelijkheden van CSS en GSAP.",
+    "content": "De opdracht is om een persoonlijke website te ontwerpen en bouwen waarmee je jezelf goed voorstelt. Het idee is dat je niet alleen laat zien wie je bent, maar ook laat zien dat je in staat bent om je eigen startniveau te overstijgen — dus iets maakt dat verder gaat dan wat je eerder kon. Daarnaast moet je jouw doelen voor de minor op de site presenteren. Het hoeft niet in één keer af te zijn: de bedoeling is dat je je site tijdens de minor steeds verder uitbouwt, persoonlijker maakt en er iets echt bijzonders van maakt.",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#wafs"
+  },
+  {
+    "title": "Browser Technologies",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Ik vond dit een erg interessante opdracht, omdat ik heb geleerd hoe je robuuste websites kan maken die op elke browser werken. Bijvoorbeeld iets simpels als input type='date' is blijkbaar niet op elk device beschikbaar. Hierin ging het dus ook vooral om progressive enhancement. Je moet dus zorgen dat iedereen de website kan gebruiken en daarna kan je visueel verder gaan met de website. Dit is een goede les voor de toekomst, omdat je niet altijd kan verwachten dat iedereen de nieuwste browser heeft.",
+    "content": "Het web is vanaf het begin ontworpen voor iedereen — ongeacht welke hardware, browser, of manier van interactie je gebruikt. Of iemand nou een oude computer heeft met een verouderde browser, of juist een gloednieuwe smartphone met touch screen of een screenreader, jouw website zou overal moeten werken. Deze lessenreeks leert je omgaan met die enorme diversiteit en laat je zien hoe je websites maakt die robuust, interactief én toegankelijk zijn, in elke situatie.",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#browser-technologies"
+  },
+  {
+    "title": "CSS To The Rescue",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "In dit vak heb ik heel veel geleerd over CSS mogelijkheden waarvan ik niet eens wist dat het kon. Zoals de CSS animation-timeline. Maar ook nieuwe kleuren zoals oklch, die je kan gebruiken in plaats van rgb of hex. Ook ben ik erachter gekomen dat sommige animaties en styling niet goed samen werken, waardoor het kan zijn dat een animatie niet afspeelt. Dit was een hele leuke opdracht, omdat ik veel heb geleerd over de mogelijkheden van CSS.",
+    "content": "In deze vierweekse cursus ga je op ontdekkingstocht in de wereld van CSS. CSS is inmiddels uitgegroeid tot een volwassen en krachtige taal, maar veel nieuwe (of onbekende) mogelijkheden worden nog nauwelijks benut. Sommige onderdelen van de CSS-specificatie krijgen niet de liefde die ze verdienen, andere zijn nog zo nieuw of complex dat we ze nog niet helemaal begrijpen. Het is jouw taak om deze onontdekte CSS-gebieden te verkennen. Je maakt iets innovatiefs, experimenteels en leuks — met alleen vanilla HTML en CSS (dus géén JavaScript, frameworks of preprocessors).",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#css-to-the-rescue"
+  },
+  {
+    "title": "Hackathon",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Ik vond deze opdracht erg leuk, omdar we hier als team een halve week samen aan hebben gewerkt om iets moois neer te zetten en ik heb ook hier veel geleerd. Ik ben ook erg trots op het infinite scroll effecr die ik heb kunnen maken en het eindresultaat van dit project is iets waar ik erg tevreden mee ben. Het zou alleen denk ik wat beter zijn als we iets langer de tijd hadden om dit project te maken. Ik denk dat we dan nog meer toffe dingen hadden kunnen maken.",
+    "content": "In deze opdracht ontwerp en bouw je samen met je team in één week een digitale loftuiting — een eerbetoon — aan vrouwen in tech die impact hebben (gehad). Hiervoor gebruik je data uit een API. Het project combineert creativiteit, techniek en samenwerking. Daarnaast is het de bedoeling dat je experimentele technieken toepast (minimaal twee), zodat het eindresultaat ook dient als showcase van wat er mogelijk is met moderne webtechnologieën. De opdracht is verdeeld in twee delen: ontwerpen en bouwen.",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#hackathon"
+  },
+  {
+    "title": "API",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Dit is tot nu toe mijn favoriete opdracht. Ik heb veel geleerd over back-end en hoe ik die soepel met de front-end kan laten samenwerken. Daarnaast ben ik ook beter geworden in het opzetten en gebruiken van een database. Ook heb ik hier voor het eerst view-transitions uitgeprobeerd en je kan hiermee hele toffe transities maken. Ik ben erg trots op de chat website die ik heb gemaakt bij dit vak en ik vraag me af hoeveel functionaliteit ik nog had kunnen maken als we een weekje extra gehad zouden hebben..",
+    "content": "Het web is een krachtig en open platform, gebouwd op standaarden die samen met de community zijn ontwikkeld. Deze openheid maakt het toegankelijk voor iedereen. Toch proberen grote techbedrijven vaak om deze openheid te ondermijnen door gesloten ecosystemen te bouwen waarin zij alles bepalen — van de ervaring tot de data. In deze vierweekse cursus ga je juist de kracht van het open web ervaren. Je leert hoe je (mobiele) webapps kunt bouwen die qua gebruikservaring niet onderdoen voor native apps. Je begint met een server-side gerenderde app en verbetert deze stapsgewijs met moderne web API's.",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#api"
+  },
+  {
+    "title": "Human Centered Design",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Dit vak was erg interessant, vooral omdat we direct met de doelgroep gingen testen. Normaal hou je natuurlijk rekening met een grote doelgroep en wil je inclusive design toepassen, maar voor deze opdracht gebruikten we juist exclusive design en hadden we een specifiek persoon waarvoor de website was. Deze opdracht was erg uniek en leuk.",
+    "content": "In dit vak draait alles om ontwerpen voor één specifiek persoon, niet voor 'de gemiddelde gebruiker'. Je leert het web écht inclusief te maken door te ontwerpen op basis van de persoonlijke voorkeuren, gewoontes en identiteit van één testpersoon. Elke week komt er iemand langs met een unieke manier van omgaan met het web. Aan jou de taak om een prototype te ontwerpen dat perfect past bij die ene persoon, gebaseerd op de principes van Exclusive Design: bestudeer de situatie goed, negeer standaardoplossingen als dat nodig is, zet de identiteit van je testpersoon voorop en wees niet bang om wat speelsheid of gekkigheid toe te voegen.",
+    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "company": "HvA",
+    "slug": "/weekly-nerd/#human-centered-design"
+  }
+]

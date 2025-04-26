@@ -33,100 +33,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // parallax effect on the parallax section
 
-  gsap.to(parallax, {
-    scrollTrigger: {
-      trigger: ".parallax-section",
-      start: "top 80%",
-      scrub: true,
-    },
-    y: 400,
-  });
-
-  gsap.to(parallax2, {
-    scrollTrigger: {
-      trigger: ".parallax-section",
-      start: "top 80%",
-      scrub: true,
-    },
-    y: 0,
-  });
-
-  parallaxImages.forEach((image) => {
-    gsap.to(image, {
+  if (parallax) {
+    gsap.to(parallax, {
       scrollTrigger: {
         trigger: ".parallax-section",
-        start: "top -20%",
-        end: "bottom bottom",
+        start: "top 80%",
         scrub: true,
       },
-      translateY: 100,
+      y: 400,
     });
-  });
 
-  gsap.to(parallax3, {
-    scrollTrigger: {
-      trigger: ".parallax-section",
-      start: "top 80%",
-      scrub: true,
-    },
-    y: 100,
-  });
+    gsap.to(parallax2, {
+      scrollTrigger: {
+        trigger: ".parallax-section",
+        start: "top 80%",
+        scrub: true,
+      },
+      y: 0,
+    });
+
+    parallaxImages.forEach((image) => {
+      gsap.to(image, {
+        scrollTrigger: {
+          trigger: ".parallax-section",
+          start: "top -20%",
+          end: "bottom bottom",
+          scrub: true,
+        },
+        translateY: 100,
+      });
+    });
+
+    gsap.to(parallax3, {
+      scrollTrigger: {
+        trigger: ".parallax-section",
+        start: "top 80%",
+        scrub: true,
+      },
+      y: 100,
+    });
+  }
 
   // scrolling text fill animation
   // SOURCE: https://www.youtube.com/watch?v=VeTwNnZUPlw&ab_channel=DesignCourse
+  // aria hidden on the element and element that is visually hidden but not with display non
+  // revert cutting after effect
 
   const splitTypes = document.querySelectorAll(".split-text");
-  splitTypes.forEach((word) => {
-    splitTypes.forEach((word, i) => {
-      const text = new SplitType(word, { types: "chars,words" });
 
-      gsap.from(text.chars, {
-        scrollTrigger: {
-          trigger: word,
-          start: "top 80%",
-          end: "bottom 20%",
-          scrub: true,
-        },
-        color: "transparent",
-        stagger: 1,
+  if (splitTypes) {
+    splitTypes.forEach((word) => {
+      splitTypes.forEach((word, i) => {
+        const text = new SplitType(word, { types: "chars,words" });
+
+        gsap.from(text.chars, {
+          scrollTrigger: {
+            trigger: word,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+          },
+          color: "transparent",
+          stagger: 1,
+        });
       });
     });
-  });
+  }
 
   // clip path effect on the work section
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true,
-      },
-    })
-    .to(articles, {
-      clipPath: "inset(0 100% 0 0)",
-      stagger: 0.5,
-    });
+  if (document.querySelector(".work-section")) {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      })
+      .to(articles, {
+        clipPath: "inset(0 100% 0 0)",
+        stagger: 0.5,
+      });
+  }
 
   // check if user prefers reduced motion and plays the animation if not
 
-  if (!window.matchMedia("(prefers-reduced-motion)").matches) {
-    gsap.from(contactForm, {
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "top 20%",
-      },
-      clipPath: "inset(100% 0 0 0)",
-      duration: 0.7,
-    });
+  if (contactForm) {
+    if (!window.matchMedia("(prefers-reduced-motion)").matches) {
+      gsap.from(contactForm, {
+        scrollTrigger: {
+          trigger: ".contact",
+          start: "top 20%",
+        },
+        clipPath: "inset(100% 0 0 0)",
+        duration: 0.7,
+      });
 
-    gsap.from(contactImage, {
-      scrollTrigger: {
-        trigger: ".contact",
-        start: "top 20%",
-      },
-      clipPath: "inset(0 0 100% 0)",
-      duration: 0.7,
-    });
+      gsap.from(contactImage, {
+        scrollTrigger: {
+          trigger: ".contact",
+          start: "top 20%",
+        },
+        clipPath: "inset(0 0 100% 0)",
+        duration: 0.7,
+      });
+    }
   }
 });
