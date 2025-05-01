@@ -130,10 +130,13 @@ async function getDetailData() {
   console.log("Current page", currentPage);
 
   if (currentPage) {
-    const slug = `/weekly-nerd/${currentPage}`;
+    const slug = `../weekly-nerd/${currentPage}`;
     const data = await fetch("../data/weeklyNerds.json");
     const articles = await data.json();
-    const article = articles.find((article) => article.slug === slug);
+    const article = articles.find((article) =>
+      article.slug.includes(currentPage)
+    );
+
     const articleEl = document.querySelector(
       `main section:first-of-type article a[href="${slug}"]`
     ).parentElement;
