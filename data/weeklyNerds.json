@@ -85,7 +85,7 @@
     "category": "assignment",
     "reflection": "Tijdens dit vak heb ik vooral geexperimenteerd met verschillende animaties van GSAP en ik heb daarnaast ook nieuwe effecten uitgeprobeerd, zoals: mix-blend-mode, clip-path animation, dot cursor en een glow die het tegenovergestelde van de cursor positie neemt. Ook heb ik een parallax effect gemaakt met scrolltrigger van GSAP. Dit was een hele leuke opdracht, omdat ik veel heb geleerd over de mogelijkheden van CSS en GSAP.",
     "content": "De opdracht is om een persoonlijke website te ontwerpen en bouwen waarmee je jezelf goed voorstelt. Het idee is dat je niet alleen laat zien wie je bent, maar ook laat zien dat je in staat bent om je eigen startniveau te overstijgen — dus iets maakt dat verder gaat dan wat je eerder kon. Daarnaast moet je jouw doelen voor de minor op de site presenteren. Het hoeft niet in één keer af te zijn: de bedoeling is dat je je site tijdens de minor steeds verder uitbouwt, persoonlijker maakt en er iets echt bijzonders van maakt.",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#wafs"
   },
@@ -95,7 +95,7 @@
     "category": "assignment",
     "reflection": "Ik vond dit een erg interessante opdracht, omdat ik heb geleerd hoe je robuuste websites kan maken die op elke browser werken. Bijvoorbeeld iets simpels als input type='date' is blijkbaar niet op elk device beschikbaar. Hierin ging het dus ook vooral om progressive enhancement. Je moet dus zorgen dat iedereen de website kan gebruiken en daarna kan je visueel verder gaan met de website. Dit is een goede les voor de toekomst, omdat je niet altijd kan verwachten dat iedereen de nieuwste browser heeft.",
     "content": "Het web is vanaf het begin ontworpen voor iedereen — ongeacht welke hardware, browser, of manier van interactie je gebruikt. Of iemand nou een oude computer heeft met een verouderde browser, of juist een gloednieuwe smartphone met touch screen of een screenreader, jouw website zou overal moeten werken. Deze lessenreeks leert je omgaan met die enorme diversiteit en laat je zien hoe je websites maakt die robuust, interactief én toegankelijk zijn, in elke situatie.",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#browser-technologies"
   },
@@ -105,7 +105,7 @@
     "category": "assignment",
     "reflection": "In dit vak heb ik heel veel geleerd over CSS mogelijkheden waarvan ik niet eens wist dat het kon. Zoals de CSS animation-timeline. Maar ook nieuwe kleuren zoals oklch, die je kan gebruiken in plaats van rgb of hex. Ook ben ik erachter gekomen dat sommige animaties en styling niet goed samen werken, waardoor het kan zijn dat een animatie niet afspeelt. Dit was een hele leuke opdracht, omdat ik veel heb geleerd over de mogelijkheden van CSS.",
     "content": "In deze vierweekse cursus ga je op ontdekkingstocht in de wereld van CSS. CSS is inmiddels uitgegroeid tot een volwassen en krachtige taal, maar veel nieuwe (of onbekende) mogelijkheden worden nog nauwelijks benut. Sommige onderdelen van de CSS-specificatie krijgen niet de liefde die ze verdienen, andere zijn nog zo nieuw of complex dat we ze nog niet helemaal begrijpen. Het is jouw taak om deze onontdekte CSS-gebieden te verkennen. Je maakt iets innovatiefs, experimenteels en leuks — met alleen vanilla HTML en CSS (dus géén JavaScript, frameworks of preprocessors).",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#css-to-the-rescue"
   },
@@ -115,7 +115,7 @@
     "category": "assignment",
     "reflection": "Ik vond deze opdracht erg leuk, omdar we hier als team een halve week samen aan hebben gewerkt om iets moois neer te zetten en ik heb ook hier veel geleerd. Ik ben ook erg trots op het infinite scroll effecr die ik heb kunnen maken en het eindresultaat van dit project is iets waar ik erg tevreden mee ben. Het zou alleen denk ik wat beter zijn als we iets langer de tijd hadden om dit project te maken. Ik denk dat we dan nog meer toffe dingen hadden kunnen maken.",
     "content": "In deze opdracht ontwerp en bouw je samen met je team in één week een digitale loftuiting — een eerbetoon — aan vrouwen in tech die impact hebben (gehad). Hiervoor gebruik je data uit een API. Het project combineert creativiteit, techniek en samenwerking. Daarnaast is het de bedoeling dat je experimentele technieken toepast (minimaal twee), zodat het eindresultaat ook dient als showcase van wat er mogelijk is met moderne webtechnologieën. De opdracht is verdeeld in twee delen: ontwerpen en bouwen.",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#hackathon"
   },
@@ -125,7 +125,7 @@
     "category": "assignment",
     "reflection": "Dit is tot nu toe mijn favoriete opdracht. Ik heb veel geleerd over back-end en hoe ik die soepel met de front-end kan laten samenwerken. Daarnaast ben ik ook beter geworden in het opzetten en gebruiken van een database. Ook heb ik hier voor het eerst view-transitions uitgeprobeerd en je kan hiermee hele toffe transities maken. Ik ben erg trots op de chat website die ik heb gemaakt bij dit vak en ik vraag me af hoeveel functionaliteit ik nog had kunnen maken als we een weekje extra gehad zouden hebben..",
     "content": "Het web is een krachtig en open platform, gebouwd op standaarden die samen met de community zijn ontwikkeld. Deze openheid maakt het toegankelijk voor iedereen. Toch proberen grote techbedrijven vaak om deze openheid te ondermijnen door gesloten ecosystemen te bouwen waarin zij alles bepalen — van de ervaring tot de data. In deze vierweekse cursus ga je juist de kracht van het open web ervaren. Je leert hoe je (mobiele) webapps kunt bouwen die qua gebruikservaring niet onderdoen voor native apps. Je begint met een server-side gerenderde app en verbetert deze stapsgewijs met moderne web API's.",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#api"
   },
@@ -135,7 +135,7 @@
     "category": "assignment",
     "reflection": "Dit vak was erg interessant, vooral omdat we direct met de doelgroep gingen testen. Normaal hou je natuurlijk rekening met een grote doelgroep en wil je inclusive design toepassen, maar voor deze opdracht gebruikten we juist exclusive design en hadden we een specifiek persoon waarvoor de website was. Deze opdracht was erg uniek en leuk.",
     "content": "In dit vak draait alles om ontwerpen voor één specifiek persoon, niet voor 'de gemiddelde gebruiker'. Je leert het web écht inclusief te maken door te ontwerpen op basis van de persoonlijke voorkeuren, gewoontes en identiteit van één testpersoon. Elke week komt er iemand langs met een unieke manier van omgaan met het web. Aan jou de taak om een prototype te ontwerpen dat perfect past bij die ene persoon, gebaseerd op de principes van Exclusive Design: bestudeer de situatie goed, negeer standaardoplossingen als dat nodig is, zet de identiteit van je testpersoon voorop en wees niet bang om wat speelsheid of gekkigheid toe te voegen.",
-    "image": "https://dlo.mijnhva.nl/d2l/api/lp/1.9/courses/609470/image?height=300&width=1200&versionNumber=fbb5f61a-00d2-4986-8e13-297079576190",
+    "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "/weekly-nerd/#human-centered-design"
   }
