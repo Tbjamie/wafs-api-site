@@ -7,7 +7,7 @@
     "content": "In de presentatie “Stop Using JS for That” laat Kilian Valkhof zien dat je tegenwoordig veel dingen die je normaal met JavaScript zou doen, ook gewoon met HTML en CSS kunt maken. Denk aan dingen als accordeons, popups en switches. Hij zegt: gebruik de simpelste oplossing die werkt — vaak is dat dus niet JS. Met HTML en CSS laat je de browser meer zelf regelen, wat vaak beter werkt én minder snel stukgaat. Hij liet live voorbeelden zien van checkboxes, de <details> tag voor accordeons, en <dialog> voor modals, allemaal zonder of met heel weinig JavaScript. Ook nieuwe CSS dingen zoals :has(), focus-visible en @starting-style kwamen voorbij.",
     "image": "https://pbs.twimg.com/profile_images/1181285099813388288/BqrzE9gF_400x400.jpg",
     "company": "Polypane",
-    "slug": "/weekly-nerd/#kilian-valkhof"
+    "slug": "../weekly-nerd/#kilian-valkhof"
   },
   {
     "title": "Pay the Web Forward",
@@ -17,7 +17,7 @@
     "content": "In “Pay the Web Forward” pleit Peter-Paul Koch voor een alternatief verdienmodel op het web, namelijk Web Monetization. Hij legt uit dat het huidige systeem — waarbij alles gratis is en gefinancierd wordt via advertenties — ontstaan is uit gewoonte en slechte beslissingen in de jaren '90. Daardoor is content nu vaak gericht op clicks in plaats van kwaliteit. Web Monetization draait het om: gebruikers kunnen vrijwillig betalen aan sites die ze echt waarderen, gebaseerd op hoe lang ze er blijven. Dit stimuleert betere content in plaats van clickbait. Je hebt hiervoor een wallet nodig, een browserextensie, en je bepaalt zelf hoeveel je per uur of per maand wilt besteden.",
     "image": "https://i.ytimg.com/vi/3Wgm4sq0pn0/maxresdefault.jpg",
     "company": "Web Monetization",
-    "slug": "/weekly-nerd/#peter-paul-koch"
+    "slug": "../weekly-nerd/#peter-paul-koch"
   },
   {
     "title": "GSAP",
@@ -27,7 +27,7 @@
     "content": "GSAP (GreenSock Animation Platform) is een krachtige JavaScript-animatiebibliotheek waarmee je heel vloeiende en complexe animaties kunt maken. Het werkt op vrijwel alles wat je op een webpagina kunt animeren: DOM-elementen, SVG's, canvas, zelfs WebGL. GSAP is supersnel, werkt goed in alle moderne browsers en is makkelijk te gebruiken met simpele code. Bijvoorbeeld: gsap.to('.box', { x: 100, duration: 1 }) — en je hebt al een animatie. Het ondersteunt ook timelines, waarmee je meerdere animaties precies na elkaar of tegelijk kunt laten gebeuren.",
     "image": "https://pixelpioneers.co/imager/pioneers/1204/cassie_evans_ad3aa96fd14ad17c252000c804266ea7.png",
     "company": "GSAP",
-    "slug": "/weekly-nerd/#cassie-evans"
+    "slug": "../weekly-nerd/#cassie-evans"
   },
   {
     "title": "Declarative Design",
@@ -37,7 +37,7 @@
     "content": "In “Declarative Design” legt Jeremy Keith het verschil uit tussen imperatief en declaratief programmeren. Bij imperatief geef je de computer strikte instructies (zoals met JavaScript), terwijl je bij declaratief vooral beschrijft wat je wil bereiken (zoals met HTML of CSS). HTML is fouttolerant en blijft werken, ook als er iets niet klopt — JavaScript niet. Daarom zegt Jeremy: “JavaScript should only do what only JavaScript can do.” Hij benadrukt dat we de browser niet moeten micromanagen, maar begeleiden. Denk dus in systemen, gebruik tools zoals clamp(), REM en sites als utopia.fyi om flexibele en schaalbare designs te maken.",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Jeremy_Keith_in_2019.jpg",
     "company": "Clearleft",
-    "slug": "/weekly-nerd/#jeremy-keith"
+    "slug": "../weekly-nerd/#jeremy-keith"
   },
   {
     "title": "Hackers United",
@@ -47,7 +47,7 @@
     "content": "In “Hackers United” deelt Rosa haar visie op wat het betekent om een hacker te zijn — en dat is iets heel anders dan het stereotype van iemand die computers kraakt. Voor haar draait hacken om creativiteit, nieuwsgierigheid en zelf dingen uitproberen: het DIY-ethos. Ze werkt met e-waste en oude apparaten en laat zien dat je met simpele tools, zoals ImageMagick via de terminal, toffe dingen kunt maken, zoals posters. Ze benadrukt dat je niet afhankelijk moet zijn van één tool of platform, maar meerdere opties moet kennen. Rosa moedigt aan om te leren door te proberen, zelfs als iets ingewikkeld is — zoals werken met Bash.",
     "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     "company": "?",
-    "slug": "/weekly-nerd/#rosa"
+    "slug": "../weekly-nerd/#rosa"
   },
   {
     "title": "Geld verdienen met Project Fugu",
@@ -57,7 +57,7 @@
     "content": "In “Geld verdienen met Project Fugu” vertelt Niels Leenheer hoe hij met webtechnologie een volledig kassasysteem heeft gebouwd, vooral voor kapsalons via zijn platform Salonhub. Waar hij vroeger native apps gebruikte, maakt hij nu alles als PWA (Progressive Web App). Dankzij Project Fugu — een initiatief van Google om PWA's krachtiger te maken — kan hij bijvoorbeeld via WebUSB en WebSerial communiceren met bonnenprinters, klantendisplays en barcodescanners. Hij heeft hiervoor zelfs eigen JavaScript-libraries geschreven zoals EscPosEncoder en WebSerialCustomerDisplay om apparaten aan te sturen via het web.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS4digmKfjea4m1AsVh1tYoi9anJFeOPiZdAaN3jjsv-pP1Gj8uxnvANb4TTCgeCnHJQ&usqp=CAU",
     "company": "?",
-    "slug": "/weekly-nerd/#niels-leenheer"
+    "slug": "../weekly-nerd/#niels-leenheer"
   },
   {
     "title": "Practical fixes for common WCAG issues",
@@ -67,7 +67,7 @@
     "content": "In “Practical fixes for common WCAG issues” legt Erik Kroes uit wat toegankelijkheid (a11y) echt inhoudt: zorgen dat je product bruikbaar is voor iedereen, ook voor mensen met een beperking. Hij behandelt vier belangrijke onderdelen: toetsenbordnavigatie, contrast, alternatieven (zoals alt-tekst en ondertiteling) en responsive design. Een toegankelijke site hoeft niet perfect te zijn, maar moet technisch gewoon werken. Hij geeft concrete voorbeelden van veelvoorkomende fouten, zoals het vergeten van skip-links, slecht contrast bij tekst of knoppen, of het gebruik van niet-semantische HTML zoals <div role='button'>.",
     "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     "company": "?",
-    "slug": "/weekly-nerd/#erik-kroes"
+    "slug": "../weekly-nerd/#erik-kroes"
   },
   {
     "title": "Thinking outside of the accessibility box",
@@ -77,7 +77,7 @@
     "content": "In “Thinking outside of the accessibility box” vertelt Nienke de Keijzer over haar ervaring met toegankelijkheid, vooral in haar werk bij GVB (het openbaar vervoer in Amsterdam). Ze wijst erop dat er veel regels zijn zoals WCAG, EU-wetgeving en nieuwe Nederlandse wetten, maar dat ze het meest leert door gewoon met mensen te praten. In haar onderzoek liep ze tegen uitdagingen aan zoals kleine testgroepen of te technische tests, maar juist door echt contact met gebruikers vond ze waardevolle inzichten. Bij GVB werkte ze aan ReisAssist, een visuele modus speciaal voor mensen met een visuele beperking.",
     "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
     "company": "GVB",
-    "slug": "/weekly-nerd/#nienke-keijzer"
+    "slug": "../weekly-nerd/#nienke-keijzer"
   },
   {
     "title": "WAFS",
@@ -87,7 +87,7 @@
     "content": "De opdracht is om een persoonlijke website te ontwerpen en bouwen waarmee je jezelf goed voorstelt. Het idee is dat je niet alleen laat zien wie je bent, maar ook laat zien dat je in staat bent om je eigen startniveau te overstijgen — dus iets maakt dat verder gaat dan wat je eerder kon. Daarnaast moet je jouw doelen voor de minor op de site presenteren. Het hoeft niet in één keer af te zijn: de bedoeling is dat je je site tijdens de minor steeds verder uitbouwt, persoonlijker maakt en er iets echt bijzonders van maakt.",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#wafs"
+    "slug": "../weekly-nerd/#wafs"
   },
   {
     "title": "Browser Technologies",
@@ -97,7 +97,7 @@
     "content": "Het web is vanaf het begin ontworpen voor iedereen — ongeacht welke hardware, browser, of manier van interactie je gebruikt. Of iemand nou een oude computer heeft met een verouderde browser, of juist een gloednieuwe smartphone met touch screen of een screenreader, jouw website zou overal moeten werken. Deze lessenreeks leert je omgaan met die enorme diversiteit en laat je zien hoe je websites maakt die robuust, interactief én toegankelijk zijn, in elke situatie.",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#browser-technologies"
+    "slug": "../weekly-nerd/#browser-technologies"
   },
   {
     "title": "CSS To The Rescue",
@@ -107,7 +107,7 @@
     "content": "In deze vierweekse cursus ga je op ontdekkingstocht in de wereld van CSS. CSS is inmiddels uitgegroeid tot een volwassen en krachtige taal, maar veel nieuwe (of onbekende) mogelijkheden worden nog nauwelijks benut. Sommige onderdelen van de CSS-specificatie krijgen niet de liefde die ze verdienen, andere zijn nog zo nieuw of complex dat we ze nog niet helemaal begrijpen. Het is jouw taak om deze onontdekte CSS-gebieden te verkennen. Je maakt iets innovatiefs, experimenteels en leuks — met alleen vanilla HTML en CSS (dus géén JavaScript, frameworks of preprocessors).",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#css-to-the-rescue"
+    "slug": "../weekly-nerd/#css-to-the-rescue"
   },
   {
     "title": "Hackathon",
@@ -117,7 +117,7 @@
     "content": "In deze opdracht ontwerp en bouw je samen met je team in één week een digitale loftuiting — een eerbetoon — aan vrouwen in tech die impact hebben (gehad). Hiervoor gebruik je data uit een API. Het project combineert creativiteit, techniek en samenwerking. Daarnaast is het de bedoeling dat je experimentele technieken toepast (minimaal twee), zodat het eindresultaat ook dient als showcase van wat er mogelijk is met moderne webtechnologieën. De opdracht is verdeeld in twee delen: ontwerpen en bouwen.",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#hackathon"
+    "slug": "../weekly-nerd/#hackathon"
   },
   {
     "title": "API",
@@ -127,7 +127,7 @@
     "content": "Het web is een krachtig en open platform, gebouwd op standaarden die samen met de community zijn ontwikkeld. Deze openheid maakt het toegankelijk voor iedereen. Toch proberen grote techbedrijven vaak om deze openheid te ondermijnen door gesloten ecosystemen te bouwen waarin zij alles bepalen — van de ervaring tot de data. In deze vierweekse cursus ga je juist de kracht van het open web ervaren. Je leert hoe je (mobiele) webapps kunt bouwen die qua gebruikservaring niet onderdoen voor native apps. Je begint met een server-side gerenderde app en verbetert deze stapsgewijs met moderne web API's.",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#api"
+    "slug": "../weekly-nerd/#api"
   },
   {
     "title": "Human Centered Design",
@@ -137,6 +137,6 @@
     "content": "In dit vak draait alles om ontwerpen voor één specifiek persoon, niet voor 'de gemiddelde gebruiker'. Je leert het web écht inclusief te maken door te ontwerpen op basis van de persoonlijke voorkeuren, gewoontes en identiteit van één testpersoon. Elke week komt er iemand langs met een unieke manier van omgaan met het web. Aan jou de taak om een prototype te ontwerpen dat perfect past bij die ene persoon, gebaseerd op de principes van Exclusive Design: bestudeer de situatie goed, negeer standaardoplossingen als dat nodig is, zet de identiteit van je testpersoon voorop en wees niet bang om wat speelsheid of gekkigheid toe te voegen.",
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
-    "slug": "/weekly-nerd/#human-centered-design"
+    "slug": "../weekly-nerd/#human-centered-design"
   }
 ]

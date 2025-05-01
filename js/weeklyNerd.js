@@ -20,7 +20,7 @@ function createCard() {
       card.classList.add("card");
 
       card.innerHTML = `
-        <a href="./${article.slug}">
+        <a href="${article.slug}">
             <img src="${article.image}" alt="${article.title}" />
             <div>
                 <div>
