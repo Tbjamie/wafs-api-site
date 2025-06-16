@@ -40,11 +40,42 @@ function createCard() {
 function addToFavorites() {
   const cards = document.querySelectorAll(".card");
 
+  const savedFavorites =
+    JSON.parse(localStorage.getItem("weeklyNerdFavorites")) || [];
+
   cards.forEach((card) => {
     const favButton = card.querySelector(".fav-button");
+    const link = card.querySelector("a");
+    const articleSlug = link ? link.getAttribute("href") : null;
+
+    if (articleSlug && savedFavorites.includes(articleSlug)) {
+      card.classList.add("favorite");
+    }
+
     favButton.addEventListener("click", (e) => {
       e.preventDefault();
       card.classList.toggle("favorite");
+
+      const updatedFavorites =
+        JSON.parse(localStorage.getItem("weeklyNerdFavorites")) || [];
+
+      if (articleSlug) {
+        if (card.classList.contains("favorite")) {
+          if (!updatedFavorites.includes(articleSlug)) {
+            updatedFavorites.push(articleSlug);
+          }
+        } else {
+          const index = updatedFavorites.indexOf(articleSlug);
+          if (index > -1) {
+            updatedFavorites.splice(index, 1);
+          }
+        }
+
+        localStorage.setItem(
+          "weeklyNerdFavorites",
+          JSON.stringify(updatedFavorites)
+        );
+      }
     });
   });
 }
@@ -72,24 +103,16 @@ function filter() {
     // if (favorites.length === 0) {
     //   noMatchesMessage.innerText = "No favorites yet!";
     //   noMatchesMessage.style.display = "block";
+    // } else {
+    //   noMatchesMessage.style.display = "none";
     // }
-  } else if (selectEl.value.toLowerCase() === "speakers") {
-    console.log("speakers");
-  } else if (selectEl.value.toLowerCase() === "lectures") {
-    console.log("lectures");
   } else {
-    console.log("all");
     cards.forEach((card) => {
       card.style.opacity = "1";
       card.style.position = "relative";
       card.style.pointerEvents = "all";
     });
     // noMatchesMessage.style.display = "none";
-
-    // if (cards.length === 0) {
-    //   noMatchesMessage.innerText = "Nothing here yet!";
-    //   noMatchesMessage.style.display = "block";
-    // }
   }
 }
 
@@ -127,7 +150,6 @@ async function getDetailData() {
   }
 
   currentPage = window.location.hash;
-  console.log("Current page", currentPage);
 
   if (currentPage) {
     const slug = `../weekly-nerd/${currentPage}`;
@@ -191,7 +213,6 @@ async function getDetailData() {
       "main section:first-of-type article"
     );
     allArticles.forEach((articleEl) => {
-      console.log("OTHER ARTICLES", articleEl);
       const articleSlug = articleEl.querySelector("a").getAttribute("href");
       if (articleSlug !== slug) {
         articleEl.style.display = "none";

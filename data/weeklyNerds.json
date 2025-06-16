@@ -80,6 +80,86 @@
     "slug": "../weekly-nerd/#nienke-keijzer"
   },
   {
+    "title": "The rise of AI-powered Voice Interfaces on the web",
+    "person": "Dave Bitter",
+    "category": "speaker",
+    "reflection": "Ik vond het erg interessant om te zien hoe spraakherkenning beter is geworden en hoe lang het eigenlijk al bestaat en hoe je deze tegenwoordig kan gebruiken om een conversatie met spraak te voeren op websites. Ik denk dat dit iets zou kunnen zijn dat op bepaalde websites handig zou kunnen zijn, zoals bij een klantenservice. Ik denk alleen niet dat dit de toekomst zal zijn van het web en ik denk ook dat de voorkeur voor klantenservice altijd uit zal gaan naar een mens.",
+    "content": "Dave Bitter liet zien hoe je AI-gestuurde voice interfaces kunt bouwen voor het web. Hij maakte zelf een webapp die live luistert naar wat je zegt en dit direct op het scherm toont. Dit is mogelijk dankzij spraakherkenning, iets dat al sinds de jaren ’50 bestaat, maar pas echt bruikbaar werd in de jaren ’90 (denk aan spraakgestuurde telefoonsystemen) en daarna verder verbeterde door Google, Alexa en andere assistenten. Zijn punt: praten is een natuurlijkere manier van communiceren dan typen, dus waarom gebruiken we dat niet meer online? Wat je nodig hebt: useSpeechRecognition: om te luisteren, ChatGPT API: om de input te verwerken, useSpeechSynthesis: om te antwoorden met spraak. Om AI een persoonlijkheid te geven, voegde hij animaties toe (bijv. “luisteren” of “antwoorden”), en gebruikte hij AI-gegenereerde stemmen die realistischer klinken, al zorgen die soms voor vertraging. Belangrijkste les: prestaties zijn belangrijker dan fancy features. Bouw gewoon iets, ga niet alleen maar praten over ideeën.",
+    "image": "https://www.davebitter.com/img/talks/remix-party.jpg",
+    "company": "iO Digital",
+    "slug": "../weekly-nerd/#dave-bitter"
+  },
+  {
+    "title": "Twitter Follow Bot and Follower Scraper",
+    "person": "Steve Jonk",
+    "category": "speaker",
+    "reflection": "Hoewel ik dit een erg interessante weekly nerd vond en de techniek erachter erg interessant was, sta ik hier ethisch gezien niet achter. Ik vind de opdracht zelf onethischer dan het breken van de TOS van Twitter en ik zou dit zelf nooit doen.",
+    "content": "Steve Jonk maakte een Twitter-bot die automatisch volgers van een ander account verzamelt en volgt. Omdat de Twitter API dit niet goed ondersteunt zonder dure toegang, gebruikte hij creatieve oplossingen zoals N8N voor workflow-automatisering, Puppeteer voor browser-automatisering en PostgreSQL voor het opslaan van gegevens. Door het gedrag van een echte gebruiker na te bootsen met willekeurige pauzes en acties, wist hij de beperkingen van Twitter te omzeilen. Het resultaat was een volledig dashboard waarin dit proces te volgen is.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXKOj6Ill2zfpb1mtEzC1_eXbI5EctOxdQcA&s",
+    "company": "iO Digital",
+    "slug": "../weekly-nerd/#steve-jonk"
+  },
+  {
+    "title": "How do you automate testing your components like a real user?",
+    "person": "Clarke Verdel",
+    "category": "speaker",
+    "reflection": "Ik vond dit een erg interessante weekly nerd, waar het belang van goed testen werd laten zien. Het was erg handig om ook verschillende manieren te zien waarop je kan testen om zo te zorgen dat er op de website geen bugs zitten. Dit kan vooral voor grote bedrijven veel geld kosten en wil je dus zeker niet laten gebeuren.",
+    "content": "Clarke Verdel werkt bij Miele aan het internationale e-commerceplatform en is een T-shaped engineer die naast front-end ook testing en DevOps doet. Ze gebruiken een eigen design system genaamd MieleAutocomplete. Zijn werkwijze is gebaseerd op de Testing Trophy: van static tooling met ESLint en TypeScript, naar unit- en componenttests, integratietests, tot aan E2E-tests die in de browser draaien. De uitdaging zit vooral in het waarborgen van zaken als responsiveness, toegankelijkheid, performance, browsercompatibiliteit, dark/light mode, animaties, SEO en multi-tenancy. Om vertrouwen in de code te krijgen worden tests gedaan op verschillende niveaus: van gesimuleerde omgevingen tot real-world browser testing met tools zoals Vitest, Cypress en Playwright.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQEJA0zMYr1QQg/profile-displayphoto-shrink_400_400/B4EZTVDv9fHUAk-/0/1738741318071?e=1755129600&v=beta&t=BNeUMkIeNjPtes4KjAllRDzEK9kv9WZoQGofcjKhRDo",
+    "company": "iO Digital",
+    "slug": "../weekly-nerd/#clarke-verdel"
+  },
+  {
+    "title": "Q42 (A11Y)",
+    "person": "Johan Huijkman",
+    "category": "speaker",
+    "reflection": "Wat ik cool vond van Q42 is dat zij A11Y niet als bijzaak zien, maar als een essentieel onderdeel van hun werk. Ik vind het tof dat ze bij alles wat ze maken vanaf het begin al zorgen dat deze toegankelijk is en dat niet als bijzaak zien. Ook zijn de 4 vragen die je kan stellen voor toegankelijkheid erg waardevol en goed om mee te nemen.",
+    "content": "Q42 is een digitaal bureau dat sinds 2000 innovatieve producten ontwikkelt met een sterke focus op toegankelijkheid, eindgebruikers en technische vernieuwing. Ze werken voor bekende klanten zoals HEMA, het Rijksmuseum en Philips Hue, en zijn sinds 2022 onderdeel van Eidra, samen met bijvoorbeeld Fabrique. Binnen Q42 wordt er veel geëxperimenteerd met nieuwe ideeën via initiatieven als W00tcamp, passiedagen, jumpstarts en bedenkdagjes. Toegankelijkheid (a11y) is een essentieel onderdeel van hun DNA, mede door de aankomende European Accessibility Act die vanaf juni 2025 verplicht wordt. Daarbij stellen ze vier kernvragen om inclusiviteit te waarborgen: wat als iemand niet goed kan zien, horen, bewegen of begrijpen?",
+    "image": "https://webdevcon.nl/wp-content/uploads/2022/04/Johan-Huijkman.jpeg",
+    "company": "Q42",
+    "slug": "../weekly-nerd/#johan-huijkman"
+  },
+  {
+    "title": "Q42 (A11Y)",
+    "person": "Marvin Sernee",
+    "category": "speaker",
+    "reflection": "Wat ik vooral interessant vond was micr.io, de technologie die Q42 heeft ontwikkeld om afbeeldingen extreem goed in te zoomen. Dit is iets wat ik nog niet eerder had gezien en ik was erg onder de indruk van hoe goed de kwaliteit was van een afbeelding als er ver werd ingezoomd. Daarnaast vond ik de projecten ook erg uniek en interessant.",
+    "content": "Q42 presenteerde twee bijzondere projecten. Het eerste project, SenseMath, is ontwikkeld in samenwerking met expertisecentrum Visio en richt zich op blinde leerlingen. Door grafieken hoorbaar te maken met verschillende soorten geluiden, waaronder een speciaal aangepast pianogeluid, kunnen blinde gebruikers wiskundige grafieken interpreteren. De app bevat een speciaal ontwikkeld toetsenbord, touch typing functionaliteit en toegang tot bijna alle wiskundeboeken via ISBN. Het tweede project, Oculi Mundi, is een interactieve 3D-ervaring van een historische kaartencollectie, gemaakt met alleen HTML en CSS om toegankelijkheid te waarborgen. De kaarten zijn extreem goed in te zoomen dankzij Q42’s eigen beeldtechnologie Micr.io.",
+    "image": "https://cdn.theorg.com/01de335f-b34b-4140-8bc4-43d916771ffb_medium.jpg",
+    "company": "Q42",
+    "slug": "../weekly-nerd/#marvin-sernee"
+  },
+  {
+    "title": "Digitaal toegankelijkheid in de praktijk",
+    "person": "Marieke de Hoop",
+    "category": "speaker",
+    "reflection": "Ik vond dit de interessantste A11Y weekly nerd, omdat hier echt werd gesproken over de praktijk van toegankelijkheid. Ook was het handig om meer details te krijgen over de EAA en het was ook goed om stil te staan bij het aantal mensen die eigenlijk toch een beperking hebben. Daarnaast waren de genoemde tools ook erg handig en ik zal die zeker opslaan om te gaan gebruiken.",
+    "content": "Toegankelijkheid is essentieel: meer dan 32% van de Nederlanders heeft een permanente beperking, en bijna iedereen ervaart tijdelijk of situationeel beperkingen. Toegankelijk ontwerpen is dus niet voor een niche, maar voor iedereen. In de toegankelijkheidsbranche werken bedrijven zoals Digitaal Toegankelijk, Cardan en Swink aan audits, advies, trainingen en het ontwikkelen van toegankelijke producten. Het werk bestaat uit testen (zoals met Stylus of kleurcontrastcheckers), adviseren en lesgeven. Met de komst van de European Accessibility Act (EAA) zijn er nu ook stevige wettelijke verplichtingen. Deze wet geldt vanaf 28 juni 2025 voor nieuwe digitale producten en diensten in de EU en wordt gehandhaafd door verschillende overheidsinstanties. Niet voldoen aan deze wet kan leiden tot boetes tot 20 miljoen euro of 10% van de omzet.",
+    "image": "https://media.licdn.com/dms/image/v2/D4E03AQHSR35GAGzD1g/profile-displayphoto-shrink_200_200/B4EZZ9BSLqHoAY-/0/1745854211358?e=1755734400&v=beta&t=pRtelwyr_RuSCWRl1-D-wm_P0sdOIiM0O3ht5j2XlKw",
+    "company": "Digitaal Toegankelijk",
+    "slug": "../weekly-nerd/#marieke-de-hoop"
+  },
+  {
+    "title": "Unwrapping web design",
+    "person": "Nils Binder",
+    "category": "speaker",
+    "reflection": "Ik vond deze weekly nerd erg interessant en ik heb toevallig laatst een opdracht moeten maken waar zo een max-width nodig was, maar nu heb ik dus de nieuwere en betere manier geleerd om zo een layout te maken. Ik vond het ook erg fijn dat hij echt code voorbeeld liet zien, zodat ik makkelijk kan terug vinden hoe het ook alweer werkt in mijn notities. Ik vond dit een van de meest interessante weekly nerds.",
+    "content": "Tijdens Pre-CSS Day werd het concept van wrappers opnieuw bekeken. De traditionele manier van centreren met vaste marges en paddings werd vergeleken met moderne CSS-technieken zoals min() en margin-inline. Deze nieuwe methodes bieden meer flexibiliteit, bijvoorbeeld met een geavanceerde variant die gebruikmaakt van max() en CSS-variabelen voor dynamische marges. Ook werd benadrukt dat ontwerpers zich niet moeten beperken tot conventies of tools als Figma, ChatGPT en Tailwind de 'triangle of boredom' maar juist bewust moeten omgaan met whitespace en layout. De website dasruhrgebiet.de werd als voorbeeld genoemd van creatief gebruik van optionele gridkolommen.",
+    "image": "https://9elements.com/blog/author/nils-binder/OoJKHgfwFS-300.jpeg",
+    "company": "9elements",
+    "slug": "../weekly-nerd/#nils-binder"
+  },
+  {
+    "title": "Tech continues to be political",
+    "person": "Miriam Suzanne",
+    "category": "speaker",
+    "reflection": "Ik vond deze talk in tegenoverstelling tot de talk van Nils Binder die ervoor was erg teleurstellend. Waar ik bij Nils Binder veel geleerd heb, kan ik dat niet zeggen over deze talk. Ik had liever nog een meer technische talk gehad in plaats van dit 'politieke' verhaal. Wel is de missie van W3C een erg goed uitgangspunt en sta ik er ook zeker achter dat het web voor iedereen toegankelijk moet zijn en op elk apparaat.",
+    "content": "De missie van W3C is: “Web for all, web on everything” – oftewel een web dat voor iedereen toegankelijk is, op elk apparaat. In de beginjaren van het internet zagen websites er allemaal ongeveer hetzelfde uit, omdat de stijl bepaald werd door de browser en de voorkeuren van de gebruiker. Ontwerpers hadden nauwelijks controle. De kernboodschap van deze talk is dat makers die voorkeuren niet moeten overschrijven en dat je niet moet ontwerpen voor ‘de gemiddelde gebruiker’, maar juist voor een breed scala aan mensen en situaties. Een opvallend citaat was: “Web design will never be a thing,” waarmee bedoeld wordt dat de gebruiker altijd de controle zou moeten houden over hoe een website eruitziet.",
+    "image": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS5GYm8vQa1Ed6QWhUEzXWPpxwp-eWvyf4qVFZygJ6Pt6g9yVWG",
+    "company": "Unknown",
+    "slug": "../weekly-nerd/#miriam-suzanne"
+  },
+  {
     "title": "WAFS",
     "person": "Jamie Tirbeni",
     "category": "assignment",
@@ -138,5 +218,25 @@
     "image": "../assets/images/wdnd-banner.jpeg",
     "company": "HvA",
     "slug": "../weekly-nerd/#human-centered-design"
+  },
+  {
+    "title": "Meesterproef",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Ik vond dit het leukste project van de minor. Het leren omgaan met een opdrachtgever, samenwerken in een team en de opdracht zelf die we hadden gekregen waren erg leuk en uitdagend. Ik zou deze opdracht zo nog een paar weken kunnen doen als er nog meer tijd was. Ik heb veel geleerd over samenwerken, back-end en ik ben een stuk beter geworden in taakgericht werken! Aan het begin van het project was ik wat te snel van start gegaan, maar nadat ik het met mijn team het erover heb gehad, ben ik daar denk ik goed mee verder gegaan zodat iedereen aan zijn leerdoelen kon werken. Ik ben ook erg trots op het eindresultaat en ik denk dat we een goede basis hebben neergezet voor de tests van volgend jaar.",
+    "content": "Bij de meesterproef kregen ik en mijn team de opdracht om een kennishub te maken voor CMD studenten en docenten, waarin het makkelijk moet zijn om informatie te vinden over CMD Theorie. We hadden in totaal 5 weken voor deze opdracht, waarvan we de eerste 2 weken bezig zijn geweest met research en design en de laatste 3 weken met development bezig waren. De doelen die ik had gesteld voor dit project waren: Samenwerken, Back-end en Taakgericht te werk gaan (Zie voor details de goals pagina). Ik begon al meteen met 2 van mijn leerdoelen door een Trello bord te starten. Deze heb ik ook voor het grootste gedeelte bijgehouden gedurende het hele project. Dit hielp mij om taakgericht te werk te gaan, want ik deed steeds een taak per keer en pas als ik klaar was dan ging ik aan de slag met iets nieuws.  Dit is zeker iets wat ik vanaf nu zal doen bij projecten, omdat ik merkte dat de kwaliteit van mijn code ook een stuk beter werd en mijn planning ook meer volgens plan ging. Voor de rest hebben we met het team alles gecommuniceerd, of dit nou ging om aanwezigheid, vragen of feedback. Daarnaast hebben we ook afspraken gemaakt over hoe we committen, branch names etc. om merge conflicts te voorkomen en we hebben ook altijd een code review gedaan voordat deze gecommit werd. Ook hadden we per week in Trello aangegeven wat we die week af wouden hebben. Hierdoor konden we uiteindelijk alles op tijd afhebben en ging het samenwerken hier dus ook een stuk beter dan bij de hackathon. Ook ben ik erg veel bezig geweest met de back-end. Ik heb voor alle pagina's de data opgehaald en voor de meeste pagina's en componenten ook gezorgd dat deze data erin kwam. Ook heb ik de zoekfunctionaliteit gemaakt wat ook in de back-end gebeurd. Bekijk voor de productbiografie en complete reflectie op de meesterproef pagina.",
+    "image": "../assets/images/wdnd-banner.jpeg",
+    "company": "Ronald Merkuur",
+    "slug": "../weekly-nerd/#meesterproef"
+  },
+  {
+    "title": "Web Design & Development",
+    "person": "Jamie Tirbeni",
+    "category": "assignment",
+    "reflection": "Ik vond deze minor ontzettend leuk en leerzaam. Ik heb veel nieuwe kennis opgedaan, vooral op het gebied van HTML en CSS, inclusief moderne en experimentele technieken die ik hiervoor nog niet kende. Ik ben blij dat ik voor deze minor heb gekozen, omdat ik echt het gevoel heb dat ik ben gegroeid. Niet alleen in mijn technische vaardigheden, maar ook in samenwerken binnen een team en het taakgericht aanpakken van projecten. De gastsprekers en docenten hebben me veel waardevolle inzichten gegeven. Eén van de dingen die me het meest is bijgebleven is het principe van 'the rule of least power', iets waar ik zeker bewuster mee om zal gaan in mijn toekomstige werk. De opdrachten binnen de minor waren heel verschillend van elkaar, wat zorgde voor afwisseling en steeds weer nieuwe uitdagingen. Dit gaf mij ook de kans om de vaardigheden die ik per vak opdeed meteen toe te passen. Het vak dat ik het leukst vond was API, omdat ik hier kon werken aan de back-end. Dat is een richting waarin ik me graag verder wil verdiepen. Toch waren CSS To The Rescue en Browser Technologies voor mij het meest interessant als het gaat om de theorie. Deze vakken hebben me laten zien hoe krachtig CSS eigenlijk is en hoe je een toegankelijke, functionele website kunt maken die werkt op verschillende browsers. Ik kijk met veel plezier terug op deze minor. Ik heb niet alleen mijn technische kennis uitgebreid, maar ook geleerd hoe belangrijk samenwerking, toegankelijkheid en doordacht ontwerp zijn. Deze ervaring neem ik mee in mijn verdere studie en carrière. Het was een waardevolle stap in mijn ontwikkeling als developer.",
+    "content": "In deze minor zijn we bezig geweest met verschillende technieken en onderwerpen die belangrijk zijn voor web design, maar vooral ook voor web development. De focus lag vooral op front-end development, maar we hebben ook de kans gehad om met back-end bezig te zijn tijdens API en de Meesterproef. We hebben geleerd over onderwerpen zoals toegankelijkheid, CSS, JavaScript, API's, Progressive Enhancement en natuurlijk een heleboel weekly nerds!",
+    "image": "../assets/images/wdnd-banner.jpeg",
+    "company": "HvA",
+    "slug": "../weekly-nerd/#web-design-development"
   }
 ]
