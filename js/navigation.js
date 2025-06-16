@@ -20,6 +20,12 @@ function setActivePage() {
         ? link.classList.add("active-page")
         : link.classList.remove("active-page");
     });
+  } else if (path.includes("/meesterproef")) {
+    navLinks.forEach((link) => {
+      link.getAttribute("href") === "/meesterproef"
+        ? link.classList.add("active-page")
+        : link.classList.remove("active-page");
+    });
   }
 }
 
