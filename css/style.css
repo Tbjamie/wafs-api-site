@@ -929,6 +929,41 @@ section:last-of-type div img {
   }
 }
 
+#meesterproef {
+  main {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: var(--fluid-padding-main);
+    padding-right: var(--fluid-padding-main);
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .image-gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    & .searchbar-component {
+      height: auto;
+    }
+  }
+}
+
 @keyframes goal-card-down {
   0% {
     transform: translateY(0%);
@@ -1023,6 +1058,12 @@ section:last-of-type div img {
     border-radius: 0 20px 20px 0;
     width: 50%;
     height: 100%;
+  }
+
+  #meesterproef {
+    .image-gallery-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
